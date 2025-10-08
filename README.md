@@ -1,5 +1,5 @@
 ## Hello, everyone 👋
-### I'm Kanako, Full-Stack Developer
+### I'm Kanako, Full-Stack Developer 💻
 
 - With 9 years of professional experience in IT industry
 - Currently, Frontend Web Developer at [Data for Good Vancouver](https://vancouver.dataforgood.ca/)
@@ -12,6 +12,8 @@
 - HTML/CSS
 - Typescript
 - NoSQL/ SQL databases
+- Python
+- Java
 
 ## Connect me
 - [LinkedIn](https://www.linkedin.com/in/kanako-taga-191363159/)
