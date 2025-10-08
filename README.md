@@ -1,4 +1,19 @@
-## Hi there 👋
+## Hello, everyone 👋
+### I'm Kanako, Full-Stack Developer
+
+- With 9 years of professional experience in IT industry
+- Currently, Frontend Web Developer at [Data for Good Vancouver](https://vancouver.dataforgood.ca/)
+- Previously, as a Senior Account Manager at [AWS](https://aws.amazon.com/)
+
+## Teck Stack
+- React
+- JavaScript
+- Node.js
+- HTML/CSS
+- Typescript
+- NoSQL/ SQL databases
+
+
 
 <!--
 **kanadev00/kanadev00** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
