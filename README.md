@@ -10,15 +10,15 @@
 
 ## 👨‍💻 About Me
 
-Full-Stack Developer based in Vancouver, BC, passionate about building scalable web applications and solving complex problems through elegant code. I specialize in creating end-to-end solutions that deliver exceptional user experiences.
+Full-Stack Developer based in Vancouver, BC, passionate about building scalable web applications and solving complex problems through coding. I specialize in creating end-to-end solutions that deliver exceptional user experiences.
 
 With proven experience at AWS, I bring deep industry knowledge and a customer-centric approach to software development. I understand that great technology is built with the end-user in mind, combining technical excellence with real-world business impact.
 
-- 🌱 Currently exploring advanced TypeScript patterns and modern web architectures
+- 🌱 Currently exploring Python and AI safety researching.
+- 🎯 Focused on delivering customer value through innovative solutions
 - 💼 Open to collaboration on innovative projects
 - 📍 Based in Vancouver, BC, Canada
-- 💬 Ask me about web development, system design, and best practices
-- 🎯 Focused on delivering customer value through innovative solutions
+
 
 ## 🛠️ Tech Stack
 
@@ -65,17 +65,6 @@ A sophisticated event-driven system built with TypeScript, showcasing modern arc
 - 🏗️ Scalable architecture design
 - 📦 Modular and maintainable codebase
 
-### [Project Name]
-**Tech Stack: React, Node.js, PostgreSQL**
-
-[Brief description of your project - what it does, key features, and your role]
-
-- 🎯 Key feature 1
-- 💡 Key feature 2
-- 🔧 Key feature 3
-
-*[Add more projects here]*
-
 ## 📊 GitHub Stats
 
 <div align="center">
@@ -99,19 +88,13 @@ A sophisticated event-driven system built with TypeScript, showcasing modern arc
 
 I believe in continuous improvement and staying up-to-date with the latest technologies. Currently diving deeper into:
 
-- Advanced TypeScript patterns
-- Microservices architecture
-- Cloud-native development with AWS
-- Customer-centric product development
-- System design and scalability
+- Python
+- AI safety research
 
 ## 📫 Let's Connect!
 
 I'm always interested in connecting with fellow developers, discussing new projects, or exploring opportunities. Feel free to reach out!
-
-- 📧 Email: [Your Email]
 - 💼 LinkedIn: [linkedin.com/in/kanako-taga](https://www.linkedin.com/in/kanako-taga/)
-- 🌐 Portfolio: [Your Portfolio URL]
 
 ---
 
