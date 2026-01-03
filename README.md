@@ -64,18 +64,6 @@ A sophisticated event-driven system built with TypeScript, showcasing modern arc
 - 🏗️ Scalable architecture design
 - 📦 Modular and maintainable codebase
 
-## 📊 GitHub Stats
-
-<div align="center">
-
-[![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=kanadev00&theme=radical)](https://git.io/streak-stats)
-
-[![Kanako's GitHub Stats](https://github-readme-stats.vercel.app/api?username=kanadev00&show_icons=true&theme=radical&hide_border=true&count_private=true)](https://github.com/kanadev00)
-
-[![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=kanadev00&layout=compact&theme=radical&hide_border=true)](https://github.com/kanadev00)
-
-</div>
-
 ## 💼 Professional Experience
 
 **Full-Stack Developer**
