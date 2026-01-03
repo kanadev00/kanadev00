@@ -57,8 +57,8 @@ With proven experience at AWS, I bring deep industry knowledge and a customer-ce
 ## 🚀 Featured Projects
 
 ### [Arvo](https://github.com/keipalg/arvo)
-**Product Management System for Handcraft Makers | React| TypeScript | PostgreSQL
-- [Project Website](https://wmdd-pj2-handcraft-23b18.web.app/)
+**Product Management System for Handcraft Makers | React| TypeScript | PostgreSQL**
+[Project Website](https://wmdd-pj2-handcraft-23b18.web.app/)
 A sophisticated event-driven system built with TypeScript, showcasing modern architectural patterns and best practices.
 
 - ⚡ High-performance event processing
