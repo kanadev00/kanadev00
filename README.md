@@ -14,7 +14,8 @@ Full-Stack Developer based in Vancouver, BC, passionate about building scalable 
 
 With proven experience at AWS, I bring deep industry knowledge and a customer-centric approach to software development. I understand that great technology is built with the end-user in mind, combining technical excellence with real-world business impact.
 
-- 🌱 Currently exploring Python and AI safety researching.
+- 💻 Currently working on web application for task management for freelance developers.
+- 🌱 Exploring　advanced Python and AI safety researching.
 - 🎯 Focused on delivering customer value through innovative solutions
 - 💼 Open to collaboration on innovative projects
 - 📍 Based in Vancouver, BC, Canada
@@ -77,7 +78,7 @@ A sophisticated event-driven system built with TypeScript, showcasing modern arc
 
 I believe in continuous improvement and staying up-to-date with the latest technologies. Currently diving deeper into:
 
-- Python
+- Advanced level of Python
 - AI safety research
 
 ## 📫 Let's Connect!
