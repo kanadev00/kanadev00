@@ -34,7 +34,6 @@ With proven experience at AWS, I bring deep industry knowledge and a customer-ce
 ![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
 ![Angular](https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white)
 ![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
-![Redux](https://img.shields.io/badge/Redux-593D88?style=for-the-badge&logo=redux&logoColor=white)
 
 ### Backend
 ![Node.js](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)
@@ -71,7 +70,9 @@ A sophisticated event-driven system built with TypeScript, showcasing modern arc
 
 [![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=kanadev00&theme=radical)](https://git.io/streak-stats)
 
-![Kanako's GitHub stats](https://github-readme-stats.vercel.app/api?username=kanadev00&show_icons=true&theme=radical&cache_seconds=86400)
+[![Kanako's GitHub Stats](https://github-readme-stats.vercel.app/api?username=kanadev00&show_icons=true&theme=radical&hide_border=true&count_private=true)](https://github.com/kanadev00)
+
+[![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=kanadev00&layout=compact&theme=radical&hide_border=true)](https://github.com/kanadev00)
 
 </div>
 
