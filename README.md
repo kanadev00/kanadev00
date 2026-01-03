@@ -57,9 +57,8 @@ With proven experience at AWS, I bring deep industry knowledge and a customer-ce
 ## 🚀 Featured Projects
 
 ### [Arvo](https://github.com/keipalg/arvo)
-**Product Management System for Handcraft Makers | React| TypeScript | PostgreSQL**
-- 🌏[Project Websitet(https://wmdd-pj2-handcraft-23b18.web.app/
-
+**Product Management System for Handcraft Makers | React | TypeScript | PostgreSQL**
+- 🌏[Project Website](https://wmdd-pj2-handcraft-23b18.web.app/)
 - 📁 Strong Data Integrity
 - 🏗️ Scalable architecture design
 - 📦 Modular and maintainable codebase
