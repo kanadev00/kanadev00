@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full-Stack Developer | Vancouver, BC</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+       <header class="top-bar animate-fade-in">
+            <div>VANCOUVER, BC • CANADA • FULL-STACK DEVELOPER</div>
+            <div class="top-bar-links">
+                <a href="https://www.linkedin.com/in/kanako-taga-191363159/">LINKEDIN</a>
+                <a href="https://github.com/kanadev00">GITHUB</a>
+            </div>
+        </header>
+        <nav class="animate-fade-in delay-1">
+            <div class="nav-left">
+                <div class="logo">KANAKO_TAGA</div>
+                <div class="nav-subtitle">Portfolio 2026</div>
+            </div>
+            <button class="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#expertise">Expertise</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="menu-overlay"></div>
+    
+
+    <div id="react-container">
+        <!-- The react application will render the HTML here  -->
+    </div>
+
+    <!-- Static sections removed - now rendered by React -->
+    <section class="featured-section" id="home" style="display:none;">
+        <div class="section-header animate-fade-in-up">
+            <div class="section-label">SELECTED PROJECTS</div>
+            <h2 class="section-title">FEATURED WORK_</h2>
+        </div>
+        <div class="projects-grid">
+            <div class="project-card animate-fade-in-up delay-1">
+                <div class="project-image">
+                    <div class="project-image-icon">🖼️</div>
+                    <div class="project-image-text">Project Screenshot</div>
+                </div>
+                <div class="project-content">
+                    <div class="project-number">01</div>
+                    <h3 class="project-title">E-Commerce Platform</h3>
+                    <p class="project-description">
+                        Complete e-commerce solution with inventory management, payment processing, 
+                        and admin dashboard. Optimized for high traffic and conversions.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">React</span>
+                        <span class="tag">Node.js</span>
+                        <span class="tag">PostgreSQL</span>
+                        <span class="tag">AWS</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card animate-fade-in-up delay-2">
+                <div class="project-image">
+                    <div class="project-image-icon">📊</div>
+                    <div class="project-image-text">Project Screenshot</div>
+                </div>
+                <div class="project-content">
+                    <div class="project-number">02</div>
+                    <h3 class="project-title">Analytics Dashboard</h3>
+                    <p class="project-description">
+                        Real-time data visualization platform with custom charts and reporting. 
+                        Handles millions of data points with excellent performance.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">Next.js</span>
+                        <span class="tag">Python</span>
+                        <span class="tag">MongoDB</span>
+                        <span class="tag">D3.js</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card animate-fade-in-up delay-3">
+                <div class="project-image">
+                    <div class="project-image-icon">💼</div>
+                    <div class="project-image-text">Project Screenshot</div>
+                </div>
+                <div class="project-content">
+                    <div class="project-number">03</div>
+                    <h3 class="project-title">SaaS Application</h3>
+                    <p class="project-description">
+                        Multi-tenant SaaS platform with subscription management, user authentication, 
+                        and comprehensive API for third-party integrations.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">Vue.js</span>
+                        <span class="tag">Django</span>
+                        <span class="tag">Redis</span>
+                        <span class="tag">Docker</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card animate-fade-in-up delay-4">
+                <div class="project-image">
+                    <div class="project-image-icon">🏥</div>
+                    <div class="project-image-text">Project Screenshot</div>
+                </div>
+                <div class="project-content">
+                    <div class="project-number">04</div>
+                    <h3 class="project-title">Healthcare Portal</h3>
+                    <p class="project-description">
+                        HIPAA-compliant patient management system with electronic health records, 
+                        secure messaging, and appointment scheduling capabilities.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">React</span>
+                        <span class="tag">Express</span>
+                        <span class="tag">MySQL</span>
+                        <span class="tag">Kubernetes</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-section" id="contact-old" style="display:none;">
+    </section>
+
+    <footer class="animate-fade-in" style="display:none;">
+    </footer>
+
+    <script>
+        // Hamburger menu toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+        const menuOverlay = document.querySelector('.menu-overlay');
+        const body = document.body;
+
+        if (hamburger && navMenu && menuOverlay) {
+            const toggleMenu = () => {
+                hamburger.classList.toggle('active');
+                navMenu.classList.toggle('active');
+                menuOverlay.classList.toggle('active');
+                body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : 'auto';
+            };
+
+            const closeMenu = () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+                menuOverlay.classList.remove('active');
+                body.style.overflow = 'auto';
+            };
+
+            hamburger.addEventListener('click', toggleMenu);
+
+            // Close menu when clicking on a link
+            document.querySelectorAll('.nav-menu a').forEach(link => {
+                link.addEventListener('click', closeMenu);
+            });
+
+            // Close menu when clicking overlay
+            menuOverlay.addEventListener('click', closeMenu);
+        }
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Intersection Observer for scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all animated elements
+        document.addEventListener('DOMContentLoaded', () => {
+            const animatedElements = document.querySelectorAll('[class*="animate-"]');
+            animatedElements.forEach(el => observer.observe(el));
+        });
+
+        // Add hover effect to project cards
+        document.querySelectorAll('.project-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transition = 'all 0.3s ease';
+            });
+        });
+
+        // Parallax effect for grid background
+        let lastScrollTop = 0;
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            const mainGrid = document.querySelector('.main-grid');
+            if (mainGrid) {
+                const offset = scrollTop * 0.5;
+                mainGrid.style.backgroundPosition = `0 ${offset}px`;
+            }
+        });
+    </script>
+    <script src="index.js" type="module"></script>
+</body>
+</html>

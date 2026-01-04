@@ -1,0 +1,11 @@
+{	
+	"type": "module",
+	"scripts": {
+		"start": "npx parcel watch src/index.js --dist-dir ../express/public"
+	},
+	"dependencies": {
+		"init": "^0.1.2",
+		"react": "^19.2.0",
+		"react-dom": "^19.2.0"
+	}
+}
