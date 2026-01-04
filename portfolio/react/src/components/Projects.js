@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-import arvoImageUrl from 'url:../img/arvo-ad.webp';
-import delistaImageUrl from 'url:../img/delista-ad.webp';
 
 const projectsData = [
     {
@@ -9,14 +7,14 @@ const projectsData = [
         subtitle: "Product Management Platform for Handcraft Makers",
         period: "Sep 2025 - Nov 2025",
         icon: "🎨",
-        image: arvoImageUrl,
+        image: "/img/arvo-ad.webp",
         description: "A web application empowering solo handcraft entrepreneurs to transform creativity into sustainable business. This platform addresses the critical challenges of cost tracking, inventory valuation, and pricing decisions. By centralizing financial data with AI-driven insights, it helps makers track profitability, optimize pricing strategies, and reduce administrative burden—freeing them to focus on their craft.",
         role: "Co-Project Manager / Full-stack Developer",
         contributions: [
             "Led product planning and feature design with a customer-focused approach",
             "Provided significant contribution in analyzing and implementing business logic",
             "Delivered Product modules: Product Inventory Management, Production Batch and Production Cost Management",
-            "Implemented price suggestion feature using AI (GPT-4 mini)"
+            "Implemented price suggestion feature using AI (GPT-5 mini)"
         ],
         techStack: [
             "React", "TypeScript", "Node.js", "PostgreSQL", "OpenAI API", "Tailwind CSS", "Google Cloud Storage", " Vite",
@@ -32,9 +30,9 @@ const projectsData = [
         id: 2,
         title: "Delista",
         subtitle: "Restaurant Menu Digitization Platform",
-        period: "May 2024 - Jul 2024",
+        period: "May 2025 - Jul 2025",
         icon: "🍽️",
-        image: delistaImageUrl,
+        image: "/img/delista-ad.webp",
         description: "B2B/B2C Web PWA for restaurant menu digitization. This solution accelerates digital transformation for restaurants using paper or PDF menus while addressing challenges faced by diners in Vancouver's diverse, multicultural food scene. It streamlines dining and menu management with real-time updates, dietary filters, and QR-accessible menus. It helps diners eat with confidence and restaurants manage with ease.",
         role: "Full-Stack Developer",
         contributions: [
@@ -49,8 +47,29 @@ const projectsData = [
         links: {
             demo: "https://langara-app.ca/projects/delista",
             github: null
+        },   
+    },
+    {
+        id: 3,
+        title: "Data for Good Vancouver Website Renewal",
+        subtitle: "High UX Quality & Conversion Improvement",
+        period: "Feb 2025 - Apr 2025",
+        icon: "📈",
+        image: "/img/dfg-website-renewal.png",
+        description: "Website renewal and content update project for Data for Good Vancouver designed to attract both clients and volunteers.",
+        role: "UX/UI Design / Frontend Web Developer",
+        contributions: [
+            "Website Design, Contents and Illustrations Creation, Development & Operations",
+            "Delivered website renewal that increased inquiries by 4.5x",
+        ],
+        techStack: [
+            "HTML", "CSS", "Wordpress", "Figma", "Adobe Photoshop", "Adobe Illustrator"
+        ],
+        links: {
+            demo: "https://vancouver.dataforgood.ca/",
+            github: null
         },
-    }
+    },
 ];
 
 const ProjectCard = ({ project, index, onClick }) => {
