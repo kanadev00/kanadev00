@@ -1093,6 +1093,8 @@
     align-items: center;
     justify-content: center;
     text-align: center;
+    position: relative;
+    overflow: hidden;
 }
 
 .hero-content {
@@ -1384,5 +1386,29 @@
 
     .profile-photo-frame {
         max-width: 250px;
+    }
+}
+
+/* Mouse Following Dots */
+.mouse-dot {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0.4;
+    transition: opacity 0.3s ease;
+    will-change: transform;
+}
+
+.hero-section:hover .mouse-dot {
+    opacity: 0.6;
+}
+
+/* Responsive: Hide dots on mobile to reduce clutter */
+@media (max-width: 768px) {
+    .mouse-dot {
+        display: none;
     }
 }

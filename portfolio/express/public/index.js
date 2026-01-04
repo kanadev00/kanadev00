@@ -1877,8 +1877,82 @@ parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
+var _s = $RefreshSig$();
 const Hero = ()=>{
+    _s();
+    const heroRef = (0, _react.useRef)(null);
+    const dotsRef = (0, _react.useRef)([]);
+    (0, _react.useEffect)(()=>{
+        const hero = heroRef.current;
+        if (!hero) return;
+        const colors = [
+            '#2B5CE6',
+            '#D97757',
+            '#8B8B8B'
+        ]; // blue, orange, gray from site palette
+        const dots = [];
+        const mousePos = {
+            x: 0,
+            y: 0
+        };
+        const dotCount = 15;
+        // Create dots
+        for(let i = 0; i < dotCount; i++){
+            const dot = document.createElement('div');
+            dot.className = 'mouse-dot';
+            dot.style.backgroundColor = colors[i % colors.length];
+            hero.appendChild(dot);
+            dots.push({
+                element: dot,
+                x: 0,
+                y: 0,
+                targetX: 0,
+                targetY: 0,
+                delay: i * 0.03
+            });
+        }
+        dotsRef.current = dots;
+        // Mouse move handler
+        const handleMouseMove = (e)=>{
+            const rect = hero.getBoundingClientRect();
+            mousePos.x = e.clientX - rect.left;
+            mousePos.y = e.clientY - rect.top;
+        };
+        // Animation loop
+        let animationFrameId;
+        const animate = ()=>{
+            dots.forEach((dot, index)=>{
+                // Each dot follows the previous one (or the mouse for the first dot)
+                if (index === 0) {
+                    dot.targetX = mousePos.x;
+                    dot.targetY = mousePos.y;
+                } else {
+                    dot.targetX = dots[index - 1].x;
+                    dot.targetY = dots[index - 1].y;
+                }
+                // Smooth interpolation
+                const speed = 0.15 - index * 0.005; // Gradually slower for trailing effect
+                dot.x += (dot.targetX - dot.x) * speed;
+                dot.y += (dot.targetY - dot.y) * speed;
+                // Update position
+                dot.element.style.left = `${dot.x}px`;
+                dot.element.style.top = `${dot.y}px`;
+            });
+            animationFrameId = requestAnimationFrame(animate);
+        };
+        hero.addEventListener('mousemove', handleMouseMove);
+        animate();
+        // Cleanup
+        return ()=>{
+            hero.removeEventListener('mousemove', handleMouseMove);
+            cancelAnimationFrame(animationFrameId);
+            dots.forEach((dot)=>{
+                if (dot.element.parentNode) dot.element.parentNode.removeChild(dot.element);
+            });
+        };
+    }, []);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("section", {
+        ref: heroRef,
         className: "hero-section animate-fade-in-up",
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
             className: "hero-content",
@@ -1889,7 +1963,7 @@ const Hero = ()=>{
                         "KANAKO TAGA",
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
                             fileName: "src/components/Hero.js",
-                            lineNumber: 8,
+                            lineNumber: 87,
                             columnNumber: 32
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
@@ -1897,13 +1971,13 @@ const Hero = ()=>{
                             children: "FULL-STACK DEVELOPER"
                         }, void 0, false, {
                             fileName: "src/components/Hero.js",
-                            lineNumber: 9,
+                            lineNumber: 88,
                             columnNumber: 21
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "src/components/Hero.js",
-                    lineNumber: 7,
+                    lineNumber: 86,
                     columnNumber: 17
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -1911,7 +1985,7 @@ const Hero = ()=>{
                     children: "Leveraging 9+ years of IT leadership (ex-AWS Senior Account Manager) to build scalable, customer-centric applications, with a long-term business mindset."
                 }, void 0, false, {
                     fileName: "src/components/Hero.js",
-                    lineNumber: 11,
+                    lineNumber: 90,
                     columnNumber: 17
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -1923,7 +1997,7 @@ const Hero = ()=>{
                             children: "View Projects"
                         }, void 0, false, {
                             fileName: "src/components/Hero.js",
-                            lineNumber: 15,
+                            lineNumber: 94,
                             columnNumber: 21
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
@@ -1932,27 +2006,28 @@ const Hero = ()=>{
                             children: "Get In Touch"
                         }, void 0, false, {
                             fileName: "src/components/Hero.js",
-                            lineNumber: 16,
+                            lineNumber: 95,
                             columnNumber: 21
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "src/components/Hero.js",
-                    lineNumber: 14,
+                    lineNumber: 93,
                     columnNumber: 17
                 }, undefined)
             ]
         }, void 0, true, {
             fileName: "src/components/Hero.js",
-            lineNumber: 6,
+            lineNumber: 85,
             columnNumber: 13
         }, undefined)
     }, void 0, false, {
         fileName: "src/components/Hero.js",
-        lineNumber: 5,
+        lineNumber: 84,
         columnNumber: 9
     }, undefined);
 };
+_s(Hero, "iayxUQZX2eKP755cI7owRGR1XKU=");
 _c = Hero;
 exports.default = Hero;
 var _c;
@@ -5053,7 +5128,7 @@ $RefreshReg$(_c2, "Projects");
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"6c7GT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"fr2tx","url:../img/arvo-ad.webp":"gr0DL","url:../img/delista-ad.webp":"buDMN"}],"gr0DL":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","url:../img/arvo-ad.webp":"gr0DL","url:../img/delista-ad.webp":"buDMN","@parcel/transformer-js/src/esmodule-helpers.js":"6c7GT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"fr2tx"}],"gr0DL":[function(require,module,exports,__globalThis) {
 module.exports = module.bundle.resolve("arvo-ad.25d65457.webp") + "?" + Date.now();
 
 },{}],"buDMN":[function(require,module,exports,__globalThis) {
