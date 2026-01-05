@@ -1,7 +1,8 @@
 {	
 	"type": "module",
 	"scripts": {
-		"start": "npx parcel watch src/index.js --dist-dir ../express/public"
+		"start": "npx parcel watch src/index.js --dist-dir ../express/public",
+		"build": "parcel build src/index.html --public-url /kanadev00/"
 	},
 	"dependencies": {
 		"init": "^0.1.2",
