@@ -2,8 +2,7 @@ name: Deploy portfolio → gh-pages
 on:
   push:
     branches: [ main ] # change if your default branch has a different name
-  workflow_dispatch:    # <-- added so you can run it manually from the UI/CLI
-
+  workflow_dispatch:
 permissions:
   contents: read
   pages: write
