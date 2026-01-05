@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React Test</title>
+    <style>
+        body { font-family: monospace; padding: 20px; }
+        #status { padding: 10px; margin: 10px 0; border: 2px solid #000; }
+        .success { background: #90EE90; }
+        .error { background: #FFB6C1; }
+    </style>
+</head>
+<body>
+    <h1>React Portfolio Debug Page</h1>
+    <div id="status">Checking...</div>
+    <div id="react-container"></div>
+
+    <script type="module">
+        const statusDiv = document.getElementById('status');
+        const container = document.getElementById('react-container');
+
+        statusDiv.innerHTML = 'Loading React bundle...';
+
+        try {
+            // Import the bundle
+            await import('./index.js');
+
+            setTimeout(() => {
+                if (container.children.length > 0) {
+                    statusDiv.innerHTML = '✓ React is rendering successfully!';
+                    statusDiv.className = 'success';
+                } else {
+                    statusDiv.innerHTML = '✗ React bundle loaded but container is empty. Check browser console for errors.';
+                    statusDiv.className = 'error';
+                }
+            }, 1000);
+        } catch (error) {
+            statusDiv.innerHTML = `✗ Error loading React: ${error.message}`;
+            statusDiv.className = 'error';
+            console.error('React loading error:', error);
+        }
+    </script>
+</body>
+</html>
