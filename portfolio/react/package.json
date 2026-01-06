@@ -1,12 +1,15 @@
-{	
+{
 	"type": "module",
 	"scripts": {
 		"start": "npx parcel watch src/index.js --dist-dir ../express/public",
-		"build": "parcel build src/index.html --public-url /kanadev00/"
+		"build": "parcel build src/index.html --dist-dir ../express/public --public-url /kanadev00/"
 	},
 	"dependencies": {
 		"init": "^0.1.2",
 		"react": "^19.2.0",
 		"react-dom": "^19.2.0"
+	},
+	"devDependencies": {
+		"parcel": "^2.12.0"
 	}
 }
