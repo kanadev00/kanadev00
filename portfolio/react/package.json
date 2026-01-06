@@ -2,7 +2,8 @@
 	"type": "module",
 	"scripts": {
 		"start": "npx parcel watch src/index.js --dist-dir ../express/public",
-		"build": "parcel build src/index.html --dist-dir ../express/public --public-url /kanadev00/"
+		"build": "parcel build src/index.js --dist-dir ../express/public && cp src/index-template.html ../express/public/index.html && cp -r src/img ../express/public/",
+		"build:gh-pages": "parcel build src/index.js --dist-dir ../express/public --public-url /kanadev00/ && cp src/index-template.html ../express/public/index.html && sed -i.bak 's|href=\"index.css\"|href=\"/kanadev00/index.css\"|g' ../express/public/index.html && sed -i.bak 's|src=\"index.js\"|src=\"/kanadev00/index.js\"|g' ../express/public/index.html && sed -i.bak 's|\"/img/|\"/kanadev00/img/|g' ../express/public/index.js && cp -r src/img ../express/public/ && rm ../express/public/*.bak"
 	},
 	"dependencies": {
 		"init": "^0.1.2",
@@ -10,6 +11,6 @@
 		"react-dom": "^19.2.0"
 	},
 	"devDependencies": {
-		"parcel": "^2.12.0"
+		"parcel": "^2.16.3"
 	}
 }

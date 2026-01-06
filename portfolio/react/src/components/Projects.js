@@ -1,7 +1,4 @@
 import React, { useState } from 'react';
-import arvoImage from '../img/arvo-ad.webp';
-import delistaImage from '../img/delista-ad.webp';
-import dfgImage from '../img/dfg-website-renewal.png';
 
 const projectsData = [
     {
@@ -10,7 +7,7 @@ const projectsData = [
         subtitle: "Product Management Platform for Handcraft Makers",
         period: "Sep 2025 - Nov 2025",
         icon: "🎨",
-        image: arvoImage,
+        image: "/img/arvo-ad.webp",
         description: "A web application empowering solo handcraft entrepreneurs to transform creativity into sustainable business. This platform addresses the critical challenges of cost tracking, inventory valuation, and pricing decisions. By centralizing financial data with AI-driven insights, it helps makers track profitability, optimize pricing strategies, and reduce administrative burden—freeing them to focus on their craft.",
         role: "Co-Project Manager / Full-stack Developer",
         contributions: [
@@ -35,7 +32,7 @@ const projectsData = [
         subtitle: "Restaurant Menu Digitization Platform",
         period: "May 2025 - Jul 2025",
         icon: "🍽️",
-        image: delistaImage,
+        image: "/img/delista-ad.webp",
         description: "B2B/B2C Web PWA for restaurant menu digitization. This solution accelerates digital transformation for restaurants using paper or PDF menus while addressing challenges faced by diners in Vancouver's diverse, multicultural food scene. It streamlines dining and menu management with real-time updates, dietary filters, and QR-accessible menus. It helps diners eat with confidence and restaurants manage with ease.",
         role: "Full-Stack Developer",
         contributions: [
@@ -58,7 +55,7 @@ const projectsData = [
         subtitle: "High UX Quality & Conversion Improvement",
         period: "Feb 2025 - Apr 2025",
         icon: "📈",
-        image: dfgImage,
+        image: "/img/dfg-website-renewal.png",
         description: "Website renewal and content update project for Data for Good Vancouver designed to attract both clients and volunteers.",
         role: "UX/UI Design / Frontend Web Developer",
         contributions: [

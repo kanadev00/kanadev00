@@ -25,6 +25,9 @@ Temporary Items
 # Node modules
 node_modules/
 
+#Percel
+.parcel-cache
+
 # Build outputs
 dist/
 build/
