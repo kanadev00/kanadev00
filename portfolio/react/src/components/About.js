@@ -1,4 +1,5 @@
 import React from 'react';
+import profilePhoto from '../img/profile-photo.webp';
 
 const About = () => {
     return (
@@ -30,7 +31,7 @@ const About = () => {
                 </div>
                 <div className="about-photo">
                     <div className="profile-photo-frame">
-                        <img src="/img/profile-photo.webp" alt="Kanako Taga - Full Stack Developer" />
+                        <img src={profilePhoto} alt="Kanako Taga - Full Stack Developer" />
                     </div>
                 </div>
             </div>
