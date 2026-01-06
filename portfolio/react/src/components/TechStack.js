@@ -7,11 +7,11 @@ const techStackData = {
     },
     frontend: {
         title: "Frontend",
-        skills: ["React", "Next.js", "Angular", "Tailwind CSS"]
+        skills: ["React", "Angular", "Tailwind CSS"]
     },
     backend: {
         title: "Backend",
-        skills: ["Node.js", "Express.js", "Hono", "Zod"]
+        skills: ["Node.js", "Express.js", "Hono", "Zod", "Next.js"]
     },
     database: {
         title: "Database",
@@ -19,7 +19,11 @@ const techStackData = {
     },
     devops: {
         title: "DevOps & Tools",
-        skills: ["Docker", "Git", "AWS", "GitHub Actions"]
+        skills: ["Git", "AWS", "GitHub Actions"]
+    },
+    Others: {
+        title: "Others",
+        skills: ["Figma", "Adobe Photoshop", "Adobe Illustrator"]
     }
 };
 
