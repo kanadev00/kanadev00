@@ -1,35 +1,128 @@
-<!DOCTYPE html><html lang=en><script type=importmap>{"imports":{"1eHC9":"/kanadev00/delista-ad.7d18b031.webp","bIA62":"/kanadev00/dfg-website-renewal.72ba72a3.png","gSjjJ":"/kanadev00/arvo-ad.6701e184.webp","h4rIw":"/kanadev00/profile-photo.fc4257b6.webp"}}</script><meta charset=UTF-8><meta name=viewport content="width=device-width, initial-scale=1.0"><title>Full-Stack Developer | Vancouver, BC</title><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;display=swap" rel=stylesheet><body>
-    <header class="animate-fade-in top-bar">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full-Stack Developer | Vancouver, BC</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="top-bar animate-fade-in">
         <div>VANCOUVER, BC • CANADA • FULL-STACK DEVELOPER</div>
-        <div class=top-bar-links>
-            <a href=https://www.linkedin.com/in/kanako-taga-191363159/>LINKEDIN</a>
-            <a href=https://github.com/kanadev00>GITHUB</a>
+        <div class="top-bar-links">
+            <a href="https://www.linkedin.com/in/kanako-taga-191363159/">LINKEDIN</a>
+            <a href="https://github.com/kanadev00">GITHUB</a>
         </div>
     </header>
     <nav class="animate-fade-in delay-1">
-        <div class=nav-left>
-            <div class=logo>KANAKO_TAGA</div>
-            <div class=nav-subtitle>Portfolio 2026</div>
+        <div class="nav-left">
+            <div class="logo">KANAKO_TAGA</div>
+            <div class="nav-subtitle">Portfolio 2026</div>
         </div>
-        <button class=hamburger aria-label="Toggle menu">
+        <button class="hamburger" aria-label="Toggle menu">
             <span></span>
             <span></span>
             <span></span>
         </button>
-        <ul class=nav-menu>
-            <li><a href=#projects>Projects</a></li>
-            <li><a href=#expertise>Expertise</a></li>
-            <li><a href=#about>About</a></li>
-            <li><a href=#contact>Contact</a></li>
+        <ul class="nav-menu">
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#expertise">Expertise</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
-    <div class=menu-overlay></div>
+    <div class="menu-overlay"></div>
 
-    <div id=react-container>
-        
+    <div id="react-container">
+        <!-- The react application will render the HTML here  -->
     </div>
 
-    <script>const hamburger=document.querySelector(".hamburger"),navMenu=document.querySelector(".nav-menu"),menuOverlay=document.querySelector(".menu-overlay"),body=document.body;if(hamburger&&navMenu&&menuOverlay){const e=()=>{hamburger.classList.remove("active"),navMenu.classList.remove("active"),menuOverlay.classList.remove("active"),body.style.overflow="auto"};hamburger.addEventListener("click",()=>{hamburger.classList.toggle("active"),navMenu.classList.toggle("active"),menuOverlay.classList.toggle("active"),body.style.overflow=navMenu.classList.contains("active")?"hidden":"auto"}),document.querySelectorAll(".nav-menu a").forEach(t=>{t.addEventListener("click",e)}),menuOverlay.addEventListener("click",e)}document.querySelectorAll('a[href^="#"]').forEach(e=>{e.addEventListener("click",function(e){e.preventDefault();let t=document.querySelector(this.getAttribute("href"));t&&t.scrollIntoView({behavior:"smooth"})})});const observerOptions={threshold:.1,rootMargin:"0px 0px -50px 0px"},observer=new IntersectionObserver(e=>{e.forEach(e=>{e.isIntersecting&&(e.target.style.opacity="1",e.target.style.transform="translateY(0)")})},observerOptions);document.addEventListener("DOMContentLoaded",()=>{document.querySelectorAll('[class*="animate-"]').forEach(e=>observer.observe(e))}),document.querySelectorAll(".project-card").forEach(e=>{e.addEventListener("mouseenter",function(){this.style.transition="all 0.3s ease"})});let lastScrollTop=0;window.addEventListener("scroll",()=>{let e=window.pageYOffset||document.documentElement.scrollTop,t=document.querySelector(".main-grid");t&&(t.style.backgroundPosition=`0 ${.5*e}px`)});</script>
-    <script src=/kanadev00/react.b4aa22b9.js type=module></script>
+    <script>
+        // Hamburger menu toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+        const menuOverlay = document.querySelector('.menu-overlay');
+        const body = document.body;
 
+        if (hamburger && navMenu && menuOverlay) {
+            const toggleMenu = () => {
+                hamburger.classList.toggle('active');
+                navMenu.classList.toggle('active');
+                menuOverlay.classList.toggle('active');
+                body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : 'auto';
+            };
 
+            const closeMenu = () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+                menuOverlay.classList.remove('active');
+                body.style.overflow = 'auto';
+            };
+
+            hamburger.addEventListener('click', toggleMenu);
+
+            // Close menu when clicking on a link
+            document.querySelectorAll('.nav-menu a').forEach(link => {
+                link.addEventListener('click', closeMenu);
+            });
+
+            // Close menu when clicking overlay
+            menuOverlay.addEventListener('click', closeMenu);
+        }
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Intersection Observer for scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all animated elements
+        document.addEventListener('DOMContentLoaded', () => {
+            const animatedElements = document.querySelectorAll('[class*="animate-"]');
+            animatedElements.forEach(el => observer.observe(el));
+        });
+
+        // Add hover effect to project cards
+        document.querySelectorAll('.project-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transition = 'all 0.3s ease';
+            });
+        });
+
+        // Parallax effect for grid background
+        let lastScrollTop = 0;
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            const mainGrid = document.querySelector('.main-grid');
+            if (mainGrid) {
+                const offset = scrollTop * 0.5;
+                mainGrid.style.backgroundPosition = `0 ${offset}px`;
+            }
+        });
+    </script>
+    <link rel="stylesheet" href="/kanadev00/index.css">
+    <script src="/kanadev00/index.js" type="module"></script>
+</body>
+</html>
