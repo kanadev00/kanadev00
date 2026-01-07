@@ -12,9 +12,9 @@
 
 ## 👨‍💻 About Me
 
-Product Manager, Full-Stack Developer based in Vancouver, BC, passionate about building scalable web applications and solving complex problems through coding. I specialize in creating end-to-end solutions that deliver exceptional user experiences.
+Product Manager, Full-Stack Developer based in Vancouver, BC, passionate about building scalable web applications and solving complex problems through product planing and coding. I specialize in creating end-to-end solutions that deliver exceptional user experiences.
 
-With proven experience at AWS, I bring deep industry knowledge and a customer-centric approach to software development. I understand that great technology is built with the end-user in mind, combining technical excellence with real-world business impact.
+With proven experience at AWS, I bring deep industry knowledge and a customer-centric approach to product development. I understand that great technology is built with the end-user in mind, combining technical excellence with real-world business impact.
 
 - 💻 Currently working on web application for task management for freelance developers.
 - 🌱 Exploring Python, UML, TDD
