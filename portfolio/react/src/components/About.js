@@ -10,7 +10,7 @@ const About = () => {
             <div className="about-content-wrapper animate-fade-in-up delay-1">
                 <div className="about-text">
                     <p>
-                        A business-minded Full-Stack Developer, Product Manager with a 9-year foundation in the IT industry. By combining a 'Customer-Obsessed' approach with deep technical insight, I specialize in building products that balance sophisticated User Experience with long-term business scalability. I thrive in cross-functional environments, collaborating with technical and product teams to maximize output and deliver high-impact solutions.
+                        Product Manager and Full-Stack Developer who bridges business strategy with technical execution. With 9 years in the IT industry, I combine a 'Customer-Obsessed' approach with deep technical insight to build products that balance sophisticated User Experience with long-term business scalability. I thrive in cross-functional environments, collaborating with engineering, product, and business development teams to maximize output and deliver high-impact solutions.
                     </p>
                     <h3 className='about-experience-header'>Experience</h3>
                     <h4>Senior Account Manager, Amazon Web Services (AWS) Japan G.K. (2018 – 2024)</h4>

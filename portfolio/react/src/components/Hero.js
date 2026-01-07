@@ -87,9 +87,9 @@ const Hero = () => {
                     KANAKO TAGA
                 </h1>
                 <div className="hero-roles">
-                    <span className="hero-role">FULL-STACK DEVELOPER</span>
-                    <span className="hero-role-divider">•</span>
                     <span className="hero-role">PRODUCT MANAGER</span>
+                    <span className="hero-role-divider">•</span>
+                    <span className="hero-role">FULL-STACK DEVELOPER</span>
                 </div>
                 <p className="hero-description">
                     Leveraging 9+ years of IT leadership (ex-AWS Senior Account Manager) to build scalable, customer-centric applications, with a long-term business mindset.

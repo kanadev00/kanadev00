@@ -3,7 +3,7 @@ import React from 'react';
 const Footer = () => {
     return (
         <footer className="animate-fade-in">
-            © 2026 KANAKO TAGA • FULL-STACK DEVELOPER • PRODUCT MANAGER • VANCOUVER, BC, CANADA
+            © 2026 KANAKO TAGA • PRODUCT MANAGER • FULL-STACK DEVELOPER • VANCOUVER, BC, CANADA
         </footer>
     );
 };

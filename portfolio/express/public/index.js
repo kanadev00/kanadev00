@@ -1971,7 +1971,7 @@ const Hero = ()=>{
                     children: [
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
                             className: "hero-role",
-                            children: "FULL-STACK DEVELOPER"
+                            children: "PRODUCT MANAGER"
                         }, void 0, false, {
                             fileName: "src/components/Hero.js",
                             lineNumber: 90,
@@ -1987,7 +1987,7 @@ const Hero = ()=>{
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
                             className: "hero-role",
-                            children: "PRODUCT MANAGER"
+                            children: "FULL-STACK DEVELOPER"
                         }, void 0, false, {
                             fileName: "src/components/Hero.js",
                             lineNumber: 92,
@@ -4415,7 +4415,7 @@ const About = ()=>{
                         className: "about-text",
                         children: [
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                children: "A business-minded Full-Stack Developer, Product Manager with a 9-year foundation in the IT industry. By combining a 'Customer-Obsessed' approach with deep technical insight, I specialize in building products that balance sophisticated User Experience with long-term business scalability. I thrive in cross-functional environments, collaborating with technical and product teams to maximize output and deliver high-impact solutions."
+                                children: "Product Manager and Full-Stack Developer who bridges business strategy with technical execution. With 9 years in the IT industry, I combine a 'Customer-Obsessed' approach with deep technical insight to build products that balance sophisticated User Experience with long-term business scalability. I thrive in cross-functional environments, collaborating with engineering, product, and business development teams to maximize output and deliver high-impact solutions."
                             }, void 0, false, {
                                 fileName: "src/components/About.js",
                                 lineNumber: 12,
@@ -5261,7 +5261,7 @@ var _reactDefault = parcelHelpers.interopDefault(_react);
 const Footer = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("footer", {
         className: "animate-fade-in",
-        children: "\xa9 2026 KANAKO TAGA \u2022 FULL-STACK DEVELOPER \u2022 PRODUCT MANAGER \u2022 VANCOUVER, BC, CANADA"
+        children: "\xa9 2026 KANAKO TAGA \u2022 PRODUCT MANAGER \u2022 FULL-STACK DEVELOPER \u2022 VANCOUVER, BC, CANADA"
     }, void 0, false, {
         fileName: "src/components/Footer.js",
         lineNumber: 5,
