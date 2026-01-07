@@ -1,8 +1,10 @@
 # Hi there, I'm Kanako Taga 👋
 
 <div align="center">
-  
-![Full-Stack Developer](https://img.shields.io/badge/Full--Stack%20Developer-Vancouver%2C%20BC-blue)
+
+![Product Manager](https://img.shields.io/badge/Product%20Manager-blue)
+![Full-Stack Developer](https://img.shields.io/badge/Full--Stack%20Developer-blue)
+![Location](https://img.shields.io/badge/📍%20Vancouver%2C%20BC-gray)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=flat&logo=linkedin)](https://www.linkedin.com/in/kanako-taga/)
 [![GitHub](https://img.shields.io/badge/GitHub-Follow-181717?style=flat&logo=github)](https://github.com/kanadev00)
 
@@ -10,12 +12,12 @@
 
 ## 👨‍💻 About Me
 
-Full-Stack Developer based in Vancouver, BC, passionate about building scalable web applications and solving complex problems through coding. I specialize in creating end-to-end solutions that deliver exceptional user experiences.
+Product Manager, Full-Stack Developer based in Vancouver, BC, passionate about building scalable web applications and solving complex problems through coding. I specialize in creating end-to-end solutions that deliver exceptional user experiences.
 
 With proven experience at AWS, I bring deep industry knowledge and a customer-centric approach to software development. I understand that great technology is built with the end-user in mind, combining technical excellence with real-world business impact.
 
 - 💻 Currently working on web application for task management for freelance developers.
-- 🌱 Exploring advanced Python.
+- 🌱 Exploring Python, UML, TDD
 - 🎯 Focused on delivering customer value through innovative solutions
 - 💼 Open to collaboration on innovative projects
 - 📍 Based in Vancouver, BC, Canada
@@ -76,8 +78,8 @@ With proven experience at AWS, I bring deep industry knowledge and a customer-ce
 
 I believe in continuous improvement and staying up-to-date with the latest technologies. Currently diving deeper into:
 
-- Advanced level of Python
-- AI safety research
+- Python
+- UML, TDD
 
 ## 📫 Let's Connect!
 
