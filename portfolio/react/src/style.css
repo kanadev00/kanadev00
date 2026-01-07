@@ -133,12 +133,28 @@
  .top-bar {
      background: var(--black);
      color: var(--white);
-     padding: 10px 40px;
+     padding: 15px 40px;
      display: flex;
      justify-content: space-between;
+     align-items: center;
      font-size: 11px;
      font-family: 'Inter', sans-serif;
      letter-spacing: 0.5px;
+ }
+
+ .top-bar-content {
+     display: flex;
+     flex-direction: column;
+     gap: 5px;
+ }
+
+ .top-bar-line {
+     line-height: 1.4;
+ }
+
+ .top-bar-links {
+     display: flex;
+     align-items: center;
  }
 
  .top-bar-links a {
@@ -158,30 +174,10 @@
      background: var(--cream);
      padding: 20px 40px;
      display: flex;
-     justify-content: space-between;
+     justify-content: flex-end;
      align-items: center;
      position: relative;
      z-index: 100;
- }
-
- .nav-left {
-     display: flex;
-     flex-direction: column;
-     gap: 5px;
- }
-
- .logo {
-     font-weight: 700;
-     font-size: 20px;
-     letter-spacing: 1px;
-     transition: all 0.3s;
-     cursor: pointer;
- }
-
- .nav-subtitle {
-     font-family: 'Inter', sans-serif;
-     font-size: 12px;
-     color: var(--gray);
  }
 
  .hamburger {
@@ -994,8 +990,21 @@
  @media (max-width: 768px) {
      .top-bar {
          flex-direction: column;
-         gap: 10px;
+         gap: 15px;
          text-align: center;
+         padding: 15px 20px;
+     }
+
+     .top-bar-content {
+         align-items: center;
+     }
+
+     .top-bar-links {
+         justify-content: center;
+     }
+
+     .top-bar-links a:first-child {
+         margin-left: 0;
      }
 
      nav {
@@ -1105,13 +1114,33 @@
 .hero-title {
     font-size: 72px;
     font-weight: 700;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     letter-spacing: -2px;
     line-height: 1.1;
 }
 
-.hero-subtitle {
+.hero-roles {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.hero-role {
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
     color: var(--orange);
+    font-family: 'Inter', sans-serif;
+    text-transform: uppercase;
+}
+
+.hero-role-divider {
+    font-size: 20px;
+    color: var(--gray);
+    font-weight: 700;
 }
 
 .hero-description {
@@ -1356,6 +1385,19 @@
 @media (max-width: 768px) {
     .hero-title {
         font-size: 42px;
+    }
+
+    .hero-roles {
+        gap: 10px;
+        font-size: 16px;
+    }
+
+    .hero-role {
+        font-size: 16px;
+    }
+
+    .hero-role-divider {
+        font-size: 16px;
     }
 
     .hero-description {
