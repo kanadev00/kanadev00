@@ -2001,7 +2001,7 @@ const Hero = ()=>{
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                     className: "hero-description",
-                    children: "Leveraging 9+ years of IT leadership (ex-AWS Senior Account Manager) to build scalable, customer-centric applications, with a long-term business mindset."
+                    children: "Leveraging 9+ years of IT leadership to build scalable, customer-centric applications, with a long-term business mindset."
                 }, void 0, false, {
                     fileName: "src/components/Hero.js",
                     lineNumber: 94,

@@ -92,7 +92,7 @@ const Hero = () => {
                     <span className="hero-role">FULL-STACK DEVELOPER</span>
                 </div>
                 <p className="hero-description">
-                    Leveraging 9+ years of IT leadership (ex-AWS Senior Account Manager) to build scalable, customer-centric applications, with a long-term business mindset.
+                    Leveraging 9+ years of IT leadership to build scalable, customer-centric applications, with a long-term business mindset.
                 </p>
                 <div className="hero-cta animate-scale delay-2">
                     <a href="#projects" className="cta-button primary">View Projects</a>
