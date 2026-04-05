@@ -462,7 +462,7 @@
  }
 
  .section-header {
-     margin-bottom: 60px;
+     margin-bottom: 30px;
  }
 
  .section-label {
@@ -520,7 +520,7 @@
  .project-card-overlay {
      background: var(--white);
      color: var(--black);
-     padding: 30px;
+     padding: 30px 30px 16px;
      transition: all 0.3s;
      border-top: 1px solid var(--black);
      flex: 1;
@@ -873,7 +873,6 @@
      display: grid;
      grid-template-columns: repeat(3, 1fr);
      gap: 20px;
-     margin-top: 60px;
  }
 
  .expertise-card {
@@ -895,6 +894,46 @@
      line-height: 2;
      color: var(--black);
      font-family: 'Lora', serif;
+ }
+
+ /* === CORE COMPETENCIES STRIP === */
+ .core-competencies-strip {
+     margin-bottom: 40px;
+ }
+
+ .core-competencies-label {
+     font-family: 'Inter', sans-serif;
+     font-size: 0.7rem;
+     font-weight: 600;
+     letter-spacing: 0.12em;
+     color: var(--gray);
+     margin-bottom: 14px;
+ }
+
+ .core-competencies-pills {
+     display: flex;
+     flex-wrap: wrap;
+     gap: 10px;
+ }
+
+ .competency-pill {
+     font-family: 'Inter', sans-serif;
+     font-size: 0.8rem;
+     padding: 0.4rem 1rem;
+     border-radius: 999px;
+     border: 1px solid var(--black);
+     color: var(--black);
+     background: transparent;
+     cursor: default;
+ }
+
+ .technical-skills-label {
+     font-family: 'Inter', sans-serif;
+     font-size: 0.7rem;
+     font-weight: 600;
+     letter-spacing: 0.12em;
+     color: var(--gray);
+     margin-bottom: 14px;
  }
 
  /* Stats Section */
@@ -1148,7 +1187,6 @@
          scroll-snap-type: x mandatory;
          -webkit-overflow-scrolling: touch;
          padding-bottom: 12px;
-         margin-top: 30px;
      }
 
      .expertise-grid .expertise-card {
@@ -1300,11 +1338,14 @@
 }
 
 .about-experience-header{
-    font-size: 20px;
-    font-weight: 700;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    color: var(--gray);
     margin-top: 40px;
-    margin-bottom: 20px;
-    letter-spacing: -0.5px;
+    margin-bottom: 14px;
+    text-transform: uppercase;
 }
 
 .about-experience-text{

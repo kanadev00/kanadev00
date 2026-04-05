@@ -43,13 +43,34 @@ const TechStackCard = ({ category, data }) => {
     );
 };
 
+const coreCompetencies = [
+    "Customer-First Product Thinking",
+    "Product Strategy",
+    "Project Management",
+    "Agile Methodologies",
+    "Cross-Functional Leadership",
+    "Stakeholder Management",
+    "Data Analysis",
+    "User Research",
+    "Technical Communication"
+];
+
 const TechStack = () => {
     return (
         <section className="expertise-section" id="expertise">
             <div className="section-header">
                 <div className="section-label">WHAT I DO</div>
-                <h2 className="section-title">TECHNICAL EXPERTISE</h2>
+                <h2 className="section-title">EXPERTISE</h2>
             </div>
+            <div className="core-competencies-strip">
+                <div className="core-competencies-label">CORE COMPETENCIES</div>
+                <div className="core-competencies-pills">
+                    {coreCompetencies.map((item) => (
+                        <span key={item} className="competency-pill">{item}</span>
+                    ))}
+                </div>
+            </div>
+            <div className="technical-skills-label">TECHNICAL SKILLS</div>
             <div className="expertise-grid">
                 {Object.entries(techStackData).map(([category, data]) => (
                     <TechStackCard key={category} category={category} data={data} />

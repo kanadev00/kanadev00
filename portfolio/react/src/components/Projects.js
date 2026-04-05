@@ -49,11 +49,11 @@ const projectsData = [
         links: {
             demo: "https://langara-app.ca/projects/delista",
             github: null
-        },   
+        },
     },
     {
         id: 3,
-        title: "Data for Good Vancouver Website Renewal",
+        title: "Data for Good Vancouver Website",
         subtitle: "High UX Quality & Conversion Improvement",
         period: "Feb 2025 - Apr 2025",
         icon: "📈",

@@ -11,9 +11,9 @@ const MainContainer = () => {
         <main className="main-container">
             <TopBar />
             <Hero />
+            <About />
             <Projects />
             <TechStack />
-            <About />
             <Contact />
             <Footer />
         </main>
