@@ -7,16 +7,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-    <header class="top-bar animate-fade-in">
+    <header class="top-bar">
         <div class="top-bar-content">
-            <div class="top-bar-line">KANAKO_TAGA PORTFOLIO 2026 • VANCOUVER, BC, CANADA</div>
-            <div class="top-bar-line">PRODUCT MANAGER • FULL-STACK DEVELOPER</div>
+            <div class="top-bar-line">KANAKO_TAGA PORTFOLIO 2026</div>
         </div>
         <div class="top-bar-links">
-            <a href="https://www.linkedin.com/in/kanako-taga-191363159/">LINKEDIN</a>
-            <a href="https://github.com/kanadev00">GITHUB</a>
+            <a href="https://www.linkedin.com/in/kanako-taga-191363159/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://github.com/kanadev00" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
         </div>
     </header>
     <nav class="animate-fade-in delay-1">
@@ -97,9 +97,9 @@
             });
         }, observerOptions);
 
-        // Observe all animated elements
+        // Observe all animated elements (exclude top-bar — controlled by scroll JS)
         document.addEventListener('DOMContentLoaded', () => {
-            const animatedElements = document.querySelectorAll('[class*="animate-"]');
+            const animatedElements = document.querySelectorAll('[class*="animate-"]:not(.top-bar)');
             animatedElements.forEach(el => observer.observe(el));
         });
 
@@ -110,16 +110,29 @@
             });
         });
 
-        // Parallax effect for grid background
-        let lastScrollTop = 0;
-        window.addEventListener('scroll', () => {
-            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        // Top bar scroll show/hide
+        const topBar = document.querySelector('.top-bar');
+        const SCROLL_THRESHOLD = 80;
+
+        function updateTopBar() {
+            const scrollTop = Math.max(0, window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop);
+            if (topBar) {
+                if (scrollTop > SCROLL_THRESHOLD) {
+                    topBar.classList.add('visible');
+                } else {
+                    topBar.classList.remove('visible');
+                }
+            }
+            // Parallax effect for grid background
             const mainGrid = document.querySelector('.main-grid');
             if (mainGrid) {
-                const offset = scrollTop * 0.5;
-                mainGrid.style.backgroundPosition = `0 ${offset}px`;
+                mainGrid.style.backgroundPosition = `0 ${scrollTop * 0.5}px`;
             }
-        });
+        }
+
+        window.addEventListener('scroll', updateTopBar, { passive: true });
+        window.addEventListener('touchend', updateTopBar, { passive: true });
+        document.addEventListener('DOMContentLoaded', updateTopBar);
     </script>
     <link rel="stylesheet" href="index.css">
     <script src="index.js" type="module"></script>

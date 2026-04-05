@@ -4,6 +4,10 @@
   padding: 0;
 }
 
+html, body {
+  overflow-x: hidden;
+}
+
 :root {
   --black: #131314;
   --white: #fff;
@@ -134,22 +138,41 @@ h1, h2, h3, h4, h5, h6 {
   background: var(--black);
   color: var(--white);
   letter-spacing: .5px;
+  z-index: 200;
+  opacity: 0;
+  pointer-events: none;
   justify-content: space-between;
   align-items: center;
   padding: 15px 40px;
   font-family: Inter, sans-serif;
   font-size: 11px;
+  transition: opacity .3s, transform .3s;
   display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  transform: translateY(-100%);
+}
+
+.top-bar.visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
 }
 
 .top-bar-content {
   flex-direction: column;
   gap: 5px;
   display: flex;
+  overflow: hidden;
 }
 
 .top-bar-line {
+  white-space: nowrap;
+  text-overflow: ellipsis;
   line-height: 1.4;
+  overflow: hidden;
 }
 
 .top-bar-links {
@@ -159,8 +182,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .top-bar-links a {
   color: var(--white);
-  text-transform: uppercase;
   margin-left: 20px;
+  font-size: 18px;
   text-decoration: none;
   transition: color .3s;
 }
@@ -461,8 +484,11 @@ h1 {
   background: var(--white);
   color: var(--black);
   border-top: 1px solid var(--black);
+  flex-direction: column;
+  flex: 1;
   padding: 30px;
   transition: all .3s;
+  display: flex;
 }
 
 .project-card-overlay .project-number {
@@ -484,9 +510,23 @@ h1 {
 
 .project-card-overlay .project-period {
   color: var(--gray);
-  margin-bottom: 15px;
+  text-align: right;
+  margin-top: auto;
+  padding-top: 12px;
+  font-family: Inter, sans-serif;
+  font-size: 10px;
+}
+
+.project-card-overlay .project-role-badge {
+  color: var(--black);
+  background-color: #ffffffd9;
+  border-radius: 3px;
+  margin-bottom: 12px;
+  padding: 3px 8px 3px 0;
   font-family: Inter, sans-serif;
   font-size: 12px;
+  font-weight: 500;
+  display: inline-block;
 }
 
 .project-card-overlay .project-tags {
@@ -936,7 +976,18 @@ footer {
   }
 
   .projects-grid {
-    grid-template-columns: 1fr;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    flex-direction: row;
+    gap: 20px;
+    padding-bottom: 12px;
+    display: flex;
+    overflow-x: auto;
+  }
+
+  .projects-grid .project-card {
+    scroll-snap-align: start;
+    flex: 0 0 80vw;
   }
 
   .stats-section {
@@ -950,22 +1001,28 @@ footer {
 
 @media (width <= 768px) {
   .top-bar {
-    text-align: center;
-    flex-direction: column;
-    gap: 15px;
-    padding: 15px 20px;
+    flex-direction: row;
+    gap: 10px;
+    padding: 12px 20px;
   }
 
   .top-bar-content {
-    align-items: center;
+    width: 100%;
+  }
+
+  .top-bar-line {
+    white-space: normal;
+    font-size: 10px;
   }
 
   .top-bar-links {
-    justify-content: center;
+    flex-shrink: 0;
+    gap: 16px;
   }
 
-  .top-bar-links a:first-child {
+  .top-bar-links a {
     margin-left: 0;
+    font-size: 16px;
   }
 
   nav {
@@ -1022,8 +1079,24 @@ footer {
     display: none;
   }
 
-  .stats-section, .expertise-grid {
+  .stats-section {
     grid-template-columns: 1fr;
+  }
+
+  .expertise-grid {
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    flex-direction: row;
+    gap: 16px;
+    margin-top: 30px;
+    padding-bottom: 12px;
+    display: flex;
+    overflow-x: auto;
+  }
+
+  .expertise-grid .expertise-card {
+    scroll-snap-align: start;
+    flex: 0 0 70vw;
   }
 
   h1 {
@@ -1370,6 +1443,36 @@ img {
   .profile-photo-frame {
     max-width: 250px;
   }
+
+  .hero-section {
+    min-height: auto;
+    padding: 60px 20px;
+  }
+
+  .featured-section, .expertise-section, .about-section, .contact-section {
+    padding: 60px 20px;
+  }
+
+  .contact-section h2 {
+    letter-spacing: -1px;
+    font-size: 36px;
+  }
+
+  .modal-overlay {
+    padding: 10px;
+  }
+
+  .modal-header {
+    padding: 30px 20px 15px;
+  }
+
+  .modal-body {
+    padding: 0 20px 30px;
+  }
+
+  .modal-image {
+    height: 200px;
+  }
 }
 
 .mouse-dot {
@@ -1391,6 +1494,11 @@ img {
 @media (width <= 768px) {
   .mouse-dot {
     display: none;
+  }
+
+  footer {
+    padding: 24px 20px;
+    font-size: 10px;
   }
 }
 /*# sourceMappingURL=index.css.map */

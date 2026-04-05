@@ -7,7 +7,7 @@ const techStackData = {
     },
     frontend: {
         title: "Frontend",
-        skills: ["React", "Angular", "Tailwind CSS"]
+        skills: ["React", "React Native", "Angular", "Tailwind CSS"]
     },
     backend: {
         title: "Backend",
@@ -15,7 +15,7 @@ const techStackData = {
     },
     database: {
         title: "Database",
-        skills: ["PostgreSQL", "MongoDB", "MySQL", "Drizzle ORM"]
+        skills: ["PostgreSQL", "MongoDB", "MySQL", "Drizzle ORM", "Firestore"]
     },
     devops: {
         title: "DevOps & Tools",
