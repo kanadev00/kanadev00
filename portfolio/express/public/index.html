@@ -85,7 +85,7 @@
             });
         });
 
-        // Intersection Observer for scroll animations
+        // Intersection Observer for scroll animations (excludes top-bar — controlled by scroll JS)
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
@@ -100,7 +100,6 @@
             });
         }, observerOptions);
 
-        // Observe all animated elements (exclude top-bar — controlled by scroll JS)
         document.addEventListener('DOMContentLoaded', () => {
             const animatedElements = document.querySelectorAll('[class*="animate-"]:not(.top-bar)');
             animatedElements.forEach(el => observer.observe(el));
