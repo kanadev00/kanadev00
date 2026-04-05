@@ -1814,44 +1814,51 @@ var _contactJs = require("./Contact.js");
 var _contactJsDefault = parcelHelpers.interopDefault(_contactJs);
 var _footerJs = require("./Footer.js");
 var _footerJsDefault = parcelHelpers.interopDefault(_footerJs);
+var _topBarJs = require("./TopBar.js");
+var _topBarJsDefault = parcelHelpers.interopDefault(_topBarJs);
 const MainContainer = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("main", {
         className: "main-container",
         children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _heroJsDefault.default), {}, void 0, false, {
-                fileName: "src/components/MainContainer.js",
-                lineNumber: 11,
-                columnNumber: 13
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _projectsJsDefault.default), {}, void 0, false, {
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _topBarJsDefault.default), {}, void 0, false, {
                 fileName: "src/components/MainContainer.js",
                 lineNumber: 12,
                 columnNumber: 13
             }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _techStackJsDefault.default), {}, void 0, false, {
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _heroJsDefault.default), {}, void 0, false, {
                 fileName: "src/components/MainContainer.js",
                 lineNumber: 13,
                 columnNumber: 13
             }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _aboutJsDefault.default), {}, void 0, false, {
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _projectsJsDefault.default), {}, void 0, false, {
                 fileName: "src/components/MainContainer.js",
                 lineNumber: 14,
                 columnNumber: 13
             }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _contactJsDefault.default), {}, void 0, false, {
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _techStackJsDefault.default), {}, void 0, false, {
                 fileName: "src/components/MainContainer.js",
                 lineNumber: 15,
                 columnNumber: 13
             }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _footerJsDefault.default), {}, void 0, false, {
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _aboutJsDefault.default), {}, void 0, false, {
                 fileName: "src/components/MainContainer.js",
                 lineNumber: 16,
+                columnNumber: 13
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _contactJsDefault.default), {}, void 0, false, {
+                fileName: "src/components/MainContainer.js",
+                lineNumber: 17,
+                columnNumber: 13
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _footerJsDefault.default), {}, void 0, false, {
+                fileName: "src/components/MainContainer.js",
+                lineNumber: 18,
                 columnNumber: 13
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/MainContainer.js",
-        lineNumber: 10,
+        lineNumber: 11,
         columnNumber: 9
     }, undefined);
 };
@@ -1865,7 +1872,7 @@ $RefreshReg$(_c, "MainContainer");
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"eBmkw","./Hero.js":"3sz5h","./About.js":"egfYJ","./TechStack.js":"9mUEr","./Projects.js":"2NdoA","./Contact.js":"cvPPH","./Footer.js":"3ejXZ","@parcel/transformer-js/src/esmodule-helpers.js":"lWWK5","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"dXIaD"}],"3sz5h":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"eBmkw","./Hero.js":"3sz5h","./About.js":"egfYJ","./TechStack.js":"9mUEr","./Projects.js":"2NdoA","./Contact.js":"cvPPH","./Footer.js":"3ejXZ","@parcel/transformer-js/src/esmodule-helpers.js":"lWWK5","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"dXIaD","./TopBar.js":"8Ze2D"}],"3sz5h":[function(require,module,exports,__globalThis) {
 var $parcel$ReactRefreshHelpers$4714 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 $parcel$ReactRefreshHelpers$4714.init();
 var prevRefreshReg = globalThis.$RefreshReg$;
@@ -5290,6 +5297,129 @@ var _c;
 $RefreshReg$(_c, "Footer");
 
   $parcel$ReactRefreshHelpers$ebee.postlude(module);
+} finally {
+  globalThis.$RefreshReg$ = prevRefreshReg;
+  globalThis.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"eBmkw","react":"5Ahx5","@parcel/transformer-js/src/esmodule-helpers.js":"lWWK5","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"dXIaD"}],"8Ze2D":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$d3fb = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$d3fb.init();
+var prevRefreshReg = globalThis.$RefreshReg$;
+var prevRefreshSig = globalThis.$RefreshSig$;
+$parcel$ReactRefreshHelpers$d3fb.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _s = $RefreshSig$();
+const TopBar = ()=>{
+    _s();
+    const topBarRef = (0, _react.useRef)(null);
+    (0, _react.useEffect)(()=>{
+        const topBar = topBarRef.current;
+        if (!topBar) return;
+        const handleScroll = ()=>{
+            if (window.scrollY > 50) topBar.classList.add('visible');
+            else topBar.classList.remove('visible');
+        };
+        window.addEventListener('scroll', handleScroll);
+        return ()=>window.removeEventListener('scroll', handleScroll);
+    }, []);
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("header", {
+        ref: topBarRef,
+        className: "top-bar animate-fade-in",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                href: "#",
+                className: "top-bar-home",
+                children: "KANAKO_TAGA PORTFOLIO 2026"
+            }, void 0, false, {
+                fileName: "src/components/TopBar.js",
+                lineNumber: 24,
+                columnNumber: 13
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "top-bar-links",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                        href: "https://www.linkedin.com/in/kanako-taga-191363159/",
+                        target: "_blank",
+                        rel: "noreferrer",
+                        "aria-label": "LinkedIn",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
+                            xmlns: "http://www.w3.org/2000/svg",
+                            viewBox: "0 0 24 24",
+                            fill: "currentColor",
+                            width: "24",
+                            height: "24",
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+                                d: "M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                            }, void 0, false, {
+                                fileName: "src/components/TopBar.js",
+                                lineNumber: 28,
+                                columnNumber: 25
+                            }, undefined)
+                        }, void 0, false, {
+                            fileName: "src/components/TopBar.js",
+                            lineNumber: 27,
+                            columnNumber: 21
+                        }, undefined)
+                    }, void 0, false, {
+                        fileName: "src/components/TopBar.js",
+                        lineNumber: 26,
+                        columnNumber: 17
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                        href: "https://github.com/kanadev00",
+                        target: "_blank",
+                        rel: "noreferrer",
+                        "aria-label": "GitHub",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
+                            xmlns: "http://www.w3.org/2000/svg",
+                            viewBox: "0 0 24 24",
+                            fill: "currentColor",
+                            width: "24",
+                            height: "24",
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+                                d: "M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
+                            }, void 0, false, {
+                                fileName: "src/components/TopBar.js",
+                                lineNumber: 33,
+                                columnNumber: 25
+                            }, undefined)
+                        }, void 0, false, {
+                            fileName: "src/components/TopBar.js",
+                            lineNumber: 32,
+                            columnNumber: 21
+                        }, undefined)
+                    }, void 0, false, {
+                        fileName: "src/components/TopBar.js",
+                        lineNumber: 31,
+                        columnNumber: 17
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/TopBar.js",
+                lineNumber: 25,
+                columnNumber: 13
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/TopBar.js",
+        lineNumber: 23,
+        columnNumber: 9
+    }, undefined);
+};
+_s(TopBar, "aKkGJctEvPhO8WpYFCvTIzJzM6o=");
+_c = TopBar;
+exports.default = TopBar;
+var _c;
+$RefreshReg$(_c, "TopBar");
+
+  $parcel$ReactRefreshHelpers$d3fb.postlude(module);
 } finally {
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;

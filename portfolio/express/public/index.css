@@ -143,7 +143,7 @@ h1, h2, h3, h4, h5, h6 {
   pointer-events: none;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 40px;
+  padding: 10px 40px;
   font-family: Inter, sans-serif;
   font-size: 11px;
   transition: opacity .3s, transform .3s;
@@ -175,17 +175,33 @@ h1, h2, h3, h4, h5, h6 {
   overflow: hidden;
 }
 
+.top-bar-home {
+  color: var(--white);
+  letter-spacing: .5px;
+  text-decoration: none;
+  transition: color .3s;
+}
+
+.top-bar-home:hover {
+  color: var(--orange);
+}
+
 .top-bar-links {
   align-items: center;
+  gap: 4px;
   display: flex;
 }
 
 .top-bar-links a {
+  width: 44px;
+  height: 44px;
   color: var(--white);
-  margin-left: 20px;
-  font-size: 18px;
+  border-radius: 4px;
+  justify-content: center;
+  align-items: center;
   text-decoration: none;
   transition: color .3s;
+  display: flex;
 }
 
 .top-bar-links a:hover {
@@ -1017,12 +1033,13 @@ footer {
 
   .top-bar-links {
     flex-shrink: 0;
-    gap: 16px;
+    gap: 1rem;
   }
 
   .top-bar-links a {
+    width: 24px;
+    height: 24px;
     margin-left: 0;
-    font-size: 16px;
   }
 
   nav {
@@ -1180,8 +1197,8 @@ img {
 }
 
 .hero-cta {
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-direction: column;
+  align-items: stretch;
   gap: 20px;
   display: flex;
 }
@@ -1192,15 +1209,16 @@ img {
   letter-spacing: 1px;
   text-transform: uppercase;
   cursor: pointer;
+  text-align: center;
   border: none;
-  width: fit-content;
+  width: 100%;
   padding: 18px 40px;
   font-family: Inter, sans-serif;
   font-size: 13px;
   font-weight: 600;
   text-decoration: none;
   transition: all .3s;
-  display: inline-block;
+  display: block;
 }
 
 .cta-button:hover {
@@ -1428,15 +1446,6 @@ img {
 
   .highlight-number {
     font-size: 36px;
-  }
-
-  .hero-cta {
-    flex-direction: column;
-  }
-
-  .cta-button {
-    text-align: center;
-    width: 100%;
   }
 
   .profile-photo-frame {

@@ -137,7 +137,7 @@
  .top-bar {
      background: var(--black);
      color: var(--white);
-     padding: 15px 40px;
+     padding: 10px 40px;
      display: flex;
      justify-content: space-between;
      align-items: center;
@@ -175,17 +175,33 @@
      text-overflow: ellipsis;
  }
 
+ .top-bar-home {
+     color: var(--white);
+     text-decoration: none;
+     letter-spacing: 0.5px;
+     transition: color 0.3s;
+ }
+
+ .top-bar-home:hover {
+     color: var(--orange);
+ }
+
  .top-bar-links {
      display: flex;
      align-items: center;
+     gap: 4px;
  }
 
  .top-bar-links a {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     width: 44px;
+     height: 44px;
      color: var(--white);
      text-decoration: none;
-     margin-left: 20px;
      transition: color 0.3s;
-     font-size: 18px;
+     border-radius: 4px;
  }
 
  .top-bar-links a:hover {
@@ -1055,13 +1071,14 @@
      }
 
      .top-bar-links {
-         gap: 16px;
+         gap: 1rem;
          flex-shrink: 0;
      }
 
      .top-bar-links a {
+         width: 24px;
+         height: 24px;
          margin-left: 0;
-         font-size: 16px;
      }
 
      nav {
@@ -1221,9 +1238,9 @@
 
 .hero-cta {
     display: flex;
+    flex-direction: column;
     gap: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
+    align-items: stretch;
 }
 
 .cta-button {
@@ -1238,9 +1255,10 @@
     cursor: pointer;
     font-family: 'Inter', sans-serif;
     transition: all 0.3s;
-    width: fit-content;
+    width: 100%;
     text-decoration: none;
-    display: inline-block;
+    display: block;
+    text-align: center;
 }
 
 .cta-button:hover {
@@ -1485,14 +1503,6 @@
         font-size: 36px;
     }
 
-    .hero-cta {
-        flex-direction: column;
-    }
-
-    .cta-button {
-        width: 100%;
-        text-align: center;
-    }
 
     .profile-photo-frame {
         max-width: 250px;
