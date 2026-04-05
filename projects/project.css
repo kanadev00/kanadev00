@@ -1,28 +1,20 @@
 /* === PROJECT DETAIL PAGE === */
 
-/* Back navigation */
-.detail-back {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  color: var(--gray);
-  font-family: Inter, sans-serif;
-  font-size: 13px;
-  font-weight: 500;
-  text-decoration: none;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-  padding: 24px 40px;
-  transition: color 0.2s;
+/* Always-visible top bar override */
+.top-bar {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
 }
 
-.detail-back:hover {
-  color: var(--black);
+body {
+  padding-top: 4rem;
 }
 
 /* Hero */
 .detail-hero {
   padding: 0;
+  margin-top: 40px;
 }
 
 .detail-hero__title {
