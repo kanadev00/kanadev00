@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arvo — Kanako Taga</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="../index.css">
+    <link rel="stylesheet" href="project.css">
+</head>
+<body>
+
+    <!-- Back link -->
+    <a href="../index.html#projects" class="detail-back">← Back to Portfolio</a>
+
+    <!-- Hero -->
+    <section class="detail-hero">
+        <div class="container">
+            <h1 class="detail-hero__title">Arvo</h1>
+            <p class="detail-hero__subtitle">Product Management Platform for Handcraft Makers</p>
+            <p class="detail-hero__period">Sep 2025 – Nov 2025</p>
+        </div>
+    </section>
+
+    <!-- Overview: image + sidebar side by side -->
+    <div class="detail-overview container">
+
+        <div class="detail-visual">
+            <img src="../img/arvo/arvo-lp-top.png" alt="Arvo — Product Management Platform for Handcraft Makers">
+        </div>
+
+        <aside class="detail-sidebar">
+
+            <div class="detail-sidebar__section">
+                <p class="sidebar-label">Tech Stack</p>
+                <div class="stack-badges">
+                    <span class="stack-badge">React</span>
+                    <span class="stack-badge">TypeScript</span>
+                    <span class="stack-badge">Node.js</span>
+                    <span class="stack-badge">PostgreSQL</span>
+                    <span class="stack-badge">OpenAI API</span>
+                    <span class="stack-badge">Hono</span>
+                    <span class="stack-badge">Drizzle ORM</span>
+                    <span class="stack-badge">Tailwind CSS</span>
+                    <span class="stack-badge">Vite</span>
+                    <span class="stack-badge">Firebase</span>
+                </div>
+            </div>
+
+            <div class="detail-sidebar__section">
+                <p class="sidebar-label">My Roles</p>
+                <ul>
+                    <li>Product Manager</li>
+                    <li>Co-Project Manager</li>
+                    <li>Full-Stack Developer</li>
+                </ul>
+            </div>
+
+            <div class="detail-sidebar__section">
+                <a href="https://wmdd-pj2-handcraft-23b18.web.app/" target="_blank" rel="noopener noreferrer" class="detail-link-btn">Live Demo</a>
+                <a href="https://github.com/keipalg/arvo" target="_blank" rel="noopener noreferrer" class="detail-link-btn detail-link-btn--secondary"><i class="fa-brands fa-github"></i> GitHub Repo</a>
+            </div>
+
+        </aside>
+
+    </div>
+
+    <!-- Main content -->
+    <main class="detail-main container">
+
+        <div class="detail-section">
+            <h2 class="detail-section__heading">Problem</h2>
+            <p>Independent handcraft sellers had no dedicated tool to manage inventory, orders, and product listings in one place — they relied on spreadsheets and manual tracking, leading to errors and lost time.</p>
+            <p>Tracking production costs, setting profitable prices, and understanding business health required juggling multiple disconnected tools. Makers needed a single platform that understood their unique workflow.</p>
+        </div>
+
+        <div class="detail-section">
+            <h2 class="detail-section__heading">Solution</h2>
+            <p><span class="contribution-role">Inventory Management</span> Automatically tracks material stock and product quantities based on production and sales — alerting makers before they run out, so no order gets missed.</p>
+            <p><span class="contribution-role">Cost & Revenue Management</span> Centralizes all costs from materials to overhead in one place, and uses AI to suggest optimal selling prices — helping makers price confidently without spreadsheet math.</p>
+            <p><span class="contribution-role">Business Health Dashboard</span> Visualizes profit, revenue, and expenses through AI-generated insights and charts — giving makers a clear picture of their business at a glance.</p>
+        </div>
+
+        <div class="detail-section">
+            <h2 class="detail-section__heading">My Contributions</h2>
+            <p>
+                <span class="contribution-role">As Product Manager:</span> Led product planning and feature design for first-time business owners with no prior domain knowledge.
+                <ul class="detail-section__list">
+                    <li>Conducted competitor analysis, defined user personas, and mapped user journeys with the designer — translating insights into an MVP scope that balanced user needs, technical feasibility, and delivery timelines.</li>
+                    <li>Designed user flows, tooltips, and automated calculations to minimize required input and reduce overwhelm.</li>
+                    <li>Integrated AI-assisted pricing suggestions and dashboard insights to support informed decision-making without business expertise.</li>
+                </ul>
+            </p>
+            <p><span class="contribution-role">As Full-Stack Developer:</span> Owned the core product modules — Product Master and Production Batch Management — ensuring data reliability through TypeScript and PostgreSQL. Implemented an AI-powered price suggestion feature using GPT-4o mini, with response caching to optimize loading speed. Engineered the prompt to incorporate real market pricing of comparable products, delivering recommendations that go beyond rule-based logic.</p>
+            <p><span class="contribution-role">As Project Manager:</span> Managed a team of 5 designers and 4 developers — leading sprint planning, coordinating delivery schedules, and reviewing deliverables for quality assurance to keep the project on track across a 3-month timeline.</p>
+            <div class="detail-screenshots-wrapper">
+                <button class="screenshots-btn screenshots-btn--prev" onclick="this.nextElementSibling.scrollBy({left:-400,behavior:'smooth'})"><i class="fa-solid fa-angle-left"></i></button>
+                <div class="detail-screenshots">
+                    <img src="../img/arvo/arvo-dashboard.png" alt="Arvo — Dashboard">
+                    <img src="../img/arvo/arvo-product-price-detail.png" alt="Arvo — Product Price Detail">
+                    <img src="../img/arvo/arvo-product-list-detail.png" alt="Arvo — Product List Detail">
+                    <img src="../img/arvo/arvo-batch.png" alt="Arvo — Production Batch">
+                </div>
+                <button class="screenshots-btn screenshots-btn--next" onclick="this.previousElementSibling.scrollBy({left:400,behavior:'smooth'})"><i class="fa-solid fa-angle-right"></i></button>
+            </div>
+        </div>
+
+        <div class="detail-section">
+            <h2 class="detail-section__heading">Impact</h2>
+            <div class="impact-box">
+                <p>Delivered a fully functional MVP within the project timeline. The application features strong data integrity through a modular, maintainable codebase — demonstrating end-to-end ownership from product definition to shipping.</p>
+                <p>The AI-driven pricing feature provides actionable insights to help makers optimize profitability, reducing the cognitive overhead of pricing decisions for solo entrepreneurs.</p>
+            </div>
+        </div>
+
+    </main>
+
+    <script>
+        document.querySelectorAll('.detail-screenshots-wrapper').forEach(wrapper => {
+            const strip = wrapper.querySelector('.detail-screenshots');
+            const prev = wrapper.querySelector('.screenshots-btn--prev');
+            const next = wrapper.querySelector('.screenshots-btn--next');
+
+            function update() {
+                prev.style.visibility = strip.scrollLeft <= 0 ? 'hidden' : 'visible';
+                next.style.visibility = strip.scrollLeft + strip.clientWidth >= strip.scrollWidth - 1 ? 'hidden' : 'visible';
+            }
+
+            strip.addEventListener('scroll', update);
+            update();
+        });
+    </script>
+
+    <!-- Footer -->
+    <footer>
+        © 2026 KANAKO TAGA • PRODUCT MANAGER • FULL-STACK DEVELOPER • VANCOUVER, BC, CANADA
+    </footer>
+
+</body>
+</html>
