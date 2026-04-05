@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delista — Kanako Taga</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="../index.css">
+    <link rel="stylesheet" href="project.css">
+    <style>
+        .detail-visual {
+            border: 1px solid var(--light-gray);
+        }
+        .detail-screenshots {
+            align-items: flex-start;
+            gap: 0;
+        }
+        .detail-screenshots img {
+            flex: 0 0 100%;
+            height: auto;
+            object-fit: contain;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Back link -->
+    <a href="../index.html#projects" class="detail-back">← Back to Portfolio</a>
+
+    <!-- Hero -->
+    <section class="detail-hero">
+        <div class="container">
+            <h1 class="detail-hero__title">Delista</h1>
+            <p class="detail-hero__subtitle">Restaurant Menu Digitization Platform</p>
+            <p class="detail-hero__period">May 2025 – Jul 2025</p>
+        </div>
+    </section>
+
+    <!-- Overview: image + sidebar side by side -->
+    <div class="detail-overview container">
+
+        <div class="detail-visual">
+            <img src="../img/delista/delista-top-hero.png" alt="Delista — Restaurant Menu Digitization Platform">
+        </div>
+
+        <aside class="detail-sidebar">
+
+            <div class="detail-sidebar__section">
+                <p class="sidebar-label">Tech Stack</p>
+                <div class="stack-badges">
+                    <span class="stack-badge">HTML</span>
+                    <span class="stack-badge">CSS</span>
+                    <span class="stack-badge">JavaScript</span>
+                    <span class="stack-badge">Firebase</span>
+                    <span class="stack-badge">GitHub</span>
+                </div>
+            </div>
+
+            <div class="detail-sidebar__section">
+                <p class="sidebar-label">My Roles</p>
+                <ul>
+                    <li>Product Manager</li>
+                    <li>Full-Stack Developer</li>
+                </ul>
+            </div>
+
+            <div class="detail-sidebar__section">
+                <a href="https://langara-app.ca/projects/delista" target="_blank" rel="noopener noreferrer" class="detail-link-btn">Live Demo</a>
+                <a href="https://github.com/kanadev00/restaurant-menu-app-delista" target="_blank" rel="noopener noreferrer" class="detail-link-btn detail-link-btn--secondary"><i class="fa-brands fa-github"></i> GitHub Repo</a>
+            </div>
+
+        </aside>
+
+    </div>
+
+    <!-- Main content -->
+    <main class="detail-main container">
+
+        <div class="detail-section">
+            <h2 class="detail-section__heading">Problem</h2>
+            <p>Restaurants using paper or PDF menus struggled to keep up with digital transformation — updating menus was slow, costly, and prone to errors. For diners in Vancouver's diverse, multicultural food scene, navigating unfamiliar menus without dietary context created friction at every meal.</p>
+            <p>There was no B2B/B2C solution that simultaneously made menu management effortless for restaurant owners while giving diners the confidence to explore and order.</p>
+        </div>
+
+        <div class="detail-section">
+            <h2 class="detail-section__heading">My Contributions</h2>
+            <p><span class="contribution-role">As Product Manager:</span> Partnered with designers to define feature requirements and UI specifications. Optimized user experience to minimize onboarding friction for both B2B (restaurant owners) and B2C (diners) users. Created a strategic business plan for future scalability.</p>
+            <p><span class="contribution-role">As Developer:</span> Developed the customer menu interface with a favorites system and Google Maps integration. Built the PWA-ready frontend with real-time Firebase data sync, dietary filters, and QR-accessible menu views.</p>
+            <div class="detail-screenshots-wrapper">
+                <button class="screenshots-btn screenshots-btn--prev" onclick="this.nextElementSibling.scrollBy({left:-400,behavior:'smooth'})"><i class="fa-solid fa-angle-left"></i></button>
+                <div class="detail-screenshots">
+                    <img src="../img/delista/delista-menu-list.png" alt="Delista — Menu List">
+                    <img src="../img/delista/delista-menu-translated.png" alt="Delista — Menu Translated">
+                    <img src="../img/delista/delista-menu-item.png" alt="Delista — Menu Item">
+                    <img src="../img/delista/delista-order-list.png" alt="Delista — Order List">
+                    <img src="../img/delista/delista-restaurant-detail.png" alt="Delista — Restaurant Detail">
+                    <img src="../img/delista/delista-restaurant.png" alt="Delista — Restaurant">
+                </div>
+                <button class="screenshots-btn screenshots-btn--next" onclick="this.previousElementSibling.scrollBy({left:400,behavior:'smooth'})"><i class="fa-solid fa-angle-right"></i></button>
+            </div>
+        </div>
+
+        <div class="detail-section">
+            <h2 class="detail-section__heading">Impact</h2>
+            <div class="impact-box">
+                <p>Delivered a working B2B/B2C Progressive Web App that streamlines dining and menu management with real-time updates, dietary filters, and QR-accessible menus — helping diners eat with confidence and restaurants manage with ease.</p>
+                <p>Recognized with the Best Web App Product Award, issued by Langara College (Aug 2025 Project1).</p>
+            </div>
+        </div>
+
+    </main>
+
+    <script>
+        document.querySelectorAll('.detail-screenshots-wrapper').forEach(wrapper => {
+            const strip = wrapper.querySelector('.detail-screenshots');
+            const prev = wrapper.querySelector('.screenshots-btn--prev');
+            const next = wrapper.querySelector('.screenshots-btn--next');
+
+            function update() {
+                prev.style.visibility = strip.scrollLeft <= 0 ? 'hidden' : 'visible';
+                next.style.visibility = strip.scrollLeft + strip.clientWidth >= strip.scrollWidth - 1 ? 'hidden' : 'visible';
+            }
+
+            strip.addEventListener('scroll', update);
+            update();
+        });
+    </script>
+
+    <!-- Footer -->
+    <footer>
+        © 2026 KANAKO TAGA • PRODUCT MANAGER • FULL-STACK DEVELOPER • VANCOUVER, BC, CANADA
+    </footer>
+
+</body>
+</html>

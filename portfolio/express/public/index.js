@@ -207,15 +207,15 @@
       });
     }
   }
-})({"2gh3G":[function(require,module,exports,__globalThis) {
+})({"bZPw4":[function(require,module,exports,__globalThis) {
 var global = arguments[3];
 var HMR_HOST = null;
 var HMR_PORT = 1234;
 var HMR_SERVER_PORT = 1234;
 var HMR_SECURE = false;
-var HMR_ENV_HASH = "d6ea1d42532a7575";
+var HMR_ENV_HASH = "a3a19147156e082a";
 var HMR_USE_SSE = false;
-module.bundle.HMR_BUNDLE_ID = "1ee9bceeeb33b1ca";
+module.bundle.HMR_BUNDLE_ID = "1288f216d7a8c1cb";
 "use strict";
 /* global HMR_HOST, HMR_PORT, HMR_SERVER_PORT, HMR_ENV_HASH, HMR_SECURE, HMR_USE_SSE, chrome, browser, __parcel__import__, __parcel__importScripts__, ServiceWorkerGlobalScope */ /*::
 import type {
@@ -713,12 +713,12 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
     }
 }
 
-},{}],"8lqZg":[function(require,module,exports,__globalThis) {
-var $parcel$ReactRefreshHelpers$20e5 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-$parcel$ReactRefreshHelpers$20e5.init();
+},{}],"9e0mc":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$9e92 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$9e92.init();
 var prevRefreshReg = globalThis.$RefreshReg$;
 var prevRefreshSig = globalThis.$RefreshSig$;
-$parcel$ReactRefreshHelpers$20e5.prelude(module);
+$parcel$ReactRefreshHelpers$9e92.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -741,16 +741,16 @@ if (container) {
     console.log('App rendered successfully');
 } else console.error('Could not find #react-container element!');
 
-  $parcel$ReactRefreshHelpers$20e5.postlude(module);
+  $parcel$ReactRefreshHelpers$9e92.postlude(module);
 } finally {
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","./style.css":"bhJkM","./components/App.js":"ey9du","react-dom/client":"lOjBx","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"iTorj":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"eBmkw","./style.css":"3FK9u","./components/App.js":"bWkOo","react-dom/client":"aTOH7","@parcel/transformer-js/src/esmodule-helpers.js":"lWWK5","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"dXIaD"}],"eBmkw":[function(require,module,exports,__globalThis) {
 'use strict';
 module.exports = require("ee51401569654d91");
 
-},{"ee51401569654d91":"48uCM"}],"48uCM":[function(require,module,exports,__globalThis) {
+},{"ee51401569654d91":"fqGnq"}],"fqGnq":[function(require,module,exports,__globalThis) {
 /**
  * @license React
  * react-jsx-dev-runtime.development.js
@@ -958,11 +958,11 @@ module.exports = require("ee51401569654d91");
     };
 })();
 
-},{"58362d9d82be395f":"21dqq"}],"21dqq":[function(require,module,exports,__globalThis) {
+},{"58362d9d82be395f":"5Ahx5"}],"5Ahx5":[function(require,module,exports,__globalThis) {
 'use strict';
 module.exports = require("a569817e6ea559f6");
 
-},{"a569817e6ea559f6":"6YvXz"}],"6YvXz":[function(require,module,exports,__globalThis) {
+},{"a569817e6ea559f6":"gD9Eg"}],"gD9Eg":[function(require,module,exports,__globalThis) {
 /**
  * @license React
  * react.development.js
@@ -1759,12 +1759,12 @@ module.exports = require("a569817e6ea559f6");
     "undefined" !== typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ && "function" === typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop && __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop(Error());
 })();
 
-},{}],"bhJkM":[function() {},{}],"ey9du":[function(require,module,exports,__globalThis) {
-var $parcel$ReactRefreshHelpers$9bc7 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-$parcel$ReactRefreshHelpers$9bc7.init();
+},{}],"3FK9u":[function() {},{}],"bWkOo":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$259c = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$259c.init();
 var prevRefreshReg = globalThis.$RefreshReg$;
 var prevRefreshSig = globalThis.$RefreshSig$;
-$parcel$ReactRefreshHelpers$9bc7.prelude(module);
+$parcel$ReactRefreshHelpers$259c.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -1786,17 +1786,17 @@ exports.default = App;
 var _c;
 $RefreshReg$(_c, "App");
 
-  $parcel$ReactRefreshHelpers$9bc7.postlude(module);
+  $parcel$ReactRefreshHelpers$259c.postlude(module);
 } finally {
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","./MainContainer.js":"g20sJ","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"g20sJ":[function(require,module,exports,__globalThis) {
-var $parcel$ReactRefreshHelpers$aed8 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-$parcel$ReactRefreshHelpers$aed8.init();
+},{"react/jsx-dev-runtime":"eBmkw","./MainContainer.js":"ljyun","@parcel/transformer-js/src/esmodule-helpers.js":"lWWK5","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"dXIaD"}],"ljyun":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$5583 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$5583.init();
 var prevRefreshReg = globalThis.$RefreshReg$;
 var prevRefreshSig = globalThis.$RefreshSig$;
-$parcel$ReactRefreshHelpers$aed8.prelude(module);
+$parcel$ReactRefreshHelpers$5583.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -1860,17 +1860,17 @@ exports.default = MainContainer;
 var _c;
 $RefreshReg$(_c, "MainContainer");
 
-  $parcel$ReactRefreshHelpers$aed8.postlude(module);
+  $parcel$ReactRefreshHelpers$5583.postlude(module);
 } finally {
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","./Hero.js":"5iHEa","./About.js":"9R1Eu","./TechStack.js":"3Bqtb","./Projects.js":"16pwG","./Contact.js":"cgAOG","./Footer.js":"8pPOA","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"5iHEa":[function(require,module,exports,__globalThis) {
-var $parcel$ReactRefreshHelpers$22b9 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-$parcel$ReactRefreshHelpers$22b9.init();
+},{"react/jsx-dev-runtime":"eBmkw","./Hero.js":"3sz5h","./About.js":"egfYJ","./TechStack.js":"9mUEr","./Projects.js":"2NdoA","./Contact.js":"cvPPH","./Footer.js":"3ejXZ","@parcel/transformer-js/src/esmodule-helpers.js":"lWWK5","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"dXIaD"}],"3sz5h":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$4714 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$4714.init();
 var prevRefreshReg = globalThis.$RefreshReg$;
 var prevRefreshSig = globalThis.$RefreshSig$;
-$parcel$ReactRefreshHelpers$22b9.prelude(module);
+$parcel$ReactRefreshHelpers$4714.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -2052,12 +2052,12 @@ exports.default = Hero;
 var _c;
 $RefreshReg$(_c, "Hero");
 
-  $parcel$ReactRefreshHelpers$22b9.postlude(module);
+  $parcel$ReactRefreshHelpers$4714.postlude(module);
 } finally {
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"gkKU3":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"eBmkw","react":"5Ahx5","@parcel/transformer-js/src/esmodule-helpers.js":"lWWK5","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"dXIaD"}],"lWWK5":[function(require,module,exports,__globalThis) {
 exports.interopDefault = function(a) {
     return a && a.__esModule ? a : {
         default: a
@@ -2087,7 +2087,7 @@ exports.export = function(dest, destName, get) {
     });
 };
 
-},{}],"km3Ru":[function(require,module,exports,__globalThis) {
+},{}],"dXIaD":[function(require,module,exports,__globalThis) {
 "use strict";
 var Refresh = require("7422ead32dcc1e6b");
 function debounce(func, delay) {
@@ -2250,11 +2250,11 @@ function registerExportsForReactRefresh(module1) {
     }
 }
 
-},{"7422ead32dcc1e6b":"786KC","e4d875b7642f9496":"cMO4r"}],"786KC":[function(require,module,exports,__globalThis) {
+},{"7422ead32dcc1e6b":"2UtJE","e4d875b7642f9496":"foKsX"}],"2UtJE":[function(require,module,exports,__globalThis) {
 'use strict';
 module.exports = require("96622d495519d4e");
 
-},{"96622d495519d4e":"hdge7"}],"hdge7":[function(require,module,exports,__globalThis) {
+},{"96622d495519d4e":"k77ek"}],"k77ek":[function(require,module,exports,__globalThis) {
 /**
  * @license React
  * react-refresh-runtime.development.js
@@ -2490,7 +2490,7 @@ module.exports = require("96622d495519d4e");
     exports.setSignature = setSignature;
 })();
 
-},{}],"cMO4r":[function(require,module,exports,__globalThis) {
+},{}],"foKsX":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "setEditorHandler", ()=>$da9882e673ac146b$export$25a22ac46f1bd016);
@@ -2998,22 +2998,6 @@ function $5f72ade198404e99$export$d07f55d4c15c0440() {
  */ /**
  * A representation of a stack frame.
  */ class $d35756f426c25812$export$8949fddf10447898 {
-    constructor(functionName = null, fileName = null, lineNumber = null, columnNumber = null, scriptCode = null, sourceFunctionName = null, sourceFileName = null, sourceLineNumber = null, sourceColumnNumber = null, sourceScriptCode = null){
-        if (functionName && functionName.indexOf('Object.') === 0) functionName = functionName.slice(7);
-        if (// https://github.com/facebook/create-react-app/issues/2097
-        // Let's ignore a meaningless name we get for top-level modules.
-        functionName === 'friendlySyntaxErrorLabel' || functionName === 'exports.__esModule' || functionName === '<anonymous>' || !functionName) functionName = null;
-        this.functionName = functionName;
-        this.fileName = fileName;
-        this.lineNumber = lineNumber;
-        this.columnNumber = columnNumber;
-        this._originalFunctionName = sourceFunctionName;
-        this._originalFileName = sourceFileName;
-        this._originalLineNumber = sourceLineNumber;
-        this._originalColumnNumber = sourceColumnNumber;
-        this._scriptCode = scriptCode;
-        this._originalScriptCode = sourceScriptCode;
-    }
     /**
    * Returns the name of this function.
    */ getFunctionName() {
@@ -3035,6 +3019,22 @@ function $5f72ade198404e99$export$d07f55d4c15c0440() {
         const functionName = this.getFunctionName();
         const source = this.getSource();
         return `${functionName}${source ? ` (${source})` : ``}`;
+    }
+    constructor(functionName = null, fileName = null, lineNumber = null, columnNumber = null, scriptCode = null, sourceFunctionName = null, sourceFileName = null, sourceLineNumber = null, sourceColumnNumber = null, sourceScriptCode = null){
+        if (functionName && functionName.indexOf('Object.') === 0) functionName = functionName.slice(7);
+        if (// https://github.com/facebook/create-react-app/issues/2097
+        // Let's ignore a meaningless name we get for top-level modules.
+        functionName === 'friendlySyntaxErrorLabel' || functionName === 'exports.__esModule' || functionName === '<anonymous>' || !functionName) functionName = null;
+        this.functionName = functionName;
+        this.fileName = fileName;
+        this.lineNumber = lineNumber;
+        this.columnNumber = columnNumber;
+        this._originalFunctionName = sourceFunctionName;
+        this._originalFileName = sourceFileName;
+        this._originalLineNumber = sourceLineNumber;
+        this._originalColumnNumber = sourceColumnNumber;
+        this._scriptCode = scriptCode;
+        this._originalScriptCode = sourceScriptCode;
     }
 }
 var $d35756f426c25812$export$2e2bcd8739ae039 = $d35756f426c25812$export$8949fddf10447898;
@@ -4365,12 +4365,12 @@ function $da9882e673ac146b$var$ErrorOverlay() {
     return null;
 }
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"9R1Eu":[function(require,module,exports,__globalThis) {
-var $parcel$ReactRefreshHelpers$5b98 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-$parcel$ReactRefreshHelpers$5b98.init();
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"lWWK5"}],"egfYJ":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$1ab9 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$1ab9.init();
 var prevRefreshReg = globalThis.$RefreshReg$;
 var prevRefreshSig = globalThis.$RefreshSig$;
-$parcel$ReactRefreshHelpers$5b98.prelude(module);
+$parcel$ReactRefreshHelpers$1ab9.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -4505,17 +4505,17 @@ exports.default = About;
 var _c;
 $RefreshReg$(_c, "About");
 
-  $parcel$ReactRefreshHelpers$5b98.postlude(module);
+  $parcel$ReactRefreshHelpers$1ab9.postlude(module);
 } finally {
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"3Bqtb":[function(require,module,exports,__globalThis) {
-var $parcel$ReactRefreshHelpers$8d44 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-$parcel$ReactRefreshHelpers$8d44.init();
+},{"react/jsx-dev-runtime":"eBmkw","react":"5Ahx5","@parcel/transformer-js/src/esmodule-helpers.js":"lWWK5","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"dXIaD"}],"9mUEr":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$06d3 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$06d3.init();
 var prevRefreshReg = globalThis.$RefreshReg$;
 var prevRefreshSig = globalThis.$RefreshSig$;
-$parcel$ReactRefreshHelpers$8d44.prelude(module);
+$parcel$ReactRefreshHelpers$06d3.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -4538,6 +4538,7 @@ const techStackData = {
         title: "Frontend",
         skills: [
             "React",
+            "React Native",
             "Angular",
             "Tailwind CSS"
         ]
@@ -4558,7 +4559,8 @@ const techStackData = {
             "PostgreSQL",
             "MongoDB",
             "MySQL",
-            "Drizzle ORM"
+            "Drizzle ORM",
+            "Firestore"
         ]
     },
     devops: {
@@ -4677,17 +4679,17 @@ var _c, _c1;
 $RefreshReg$(_c, "TechStackCard");
 $RefreshReg$(_c1, "TechStack");
 
-  $parcel$ReactRefreshHelpers$8d44.postlude(module);
+  $parcel$ReactRefreshHelpers$06d3.postlude(module);
 } finally {
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"16pwG":[function(require,module,exports,__globalThis) {
-var $parcel$ReactRefreshHelpers$ec2f = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-$parcel$ReactRefreshHelpers$ec2f.init();
+},{"react/jsx-dev-runtime":"eBmkw","react":"5Ahx5","@parcel/transformer-js/src/esmodule-helpers.js":"lWWK5","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"dXIaD"}],"2NdoA":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$cf23 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$cf23.init();
 var prevRefreshReg = globalThis.$RefreshReg$;
 var prevRefreshSig = globalThis.$RefreshSig$;
-$parcel$ReactRefreshHelpers$ec2f.prelude(module);
+$parcel$ReactRefreshHelpers$cf23.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -4703,9 +4705,10 @@ const projectsData = [
         subtitle: "Product Management Platform for Handcraft Makers",
         period: "Sep 2025 - Nov 2025",
         icon: "\uD83C\uDFA8",
-        image: "/img/arvo-ad.webp",
+        image: "/img/arvo/arvo-ad.webp",
+        detailPage: "projects/arvo.html",
         description: "A web application empowering solo handcraft entrepreneurs to transform creativity into sustainable business. This platform addresses the critical challenges of cost tracking, inventory valuation, and pricing decisions. By centralizing financial data with AI-driven insights, it helps makers track profitability, optimize pricing strategies, and reduce administrative burden\u2014freeing them to focus on their craft.",
-        role: "Co-Project Manager / Full-stack Developer",
+        role: "Product Manager / Co-Project Manager / Full-stack Developer",
         contributions: [
             "Led product planning and feature design with a customer-focused approach",
             "Provided significant contribution in analyzing and implementing business logic",
@@ -4739,9 +4742,10 @@ const projectsData = [
         subtitle: "Restaurant Menu Digitization Platform",
         period: "May 2025 - Jul 2025",
         icon: "\uD83C\uDF7D\uFE0F",
-        image: "/img/delista-ad.webp",
+        image: "/img/delista/delista-ad.webp",
+        detailPage: "projects/delista.html",
         description: "B2B/B2C Web PWA for restaurant menu digitization. This solution accelerates digital transformation for restaurants using paper or PDF menus while addressing challenges faced by diners in Vancouver's diverse, multicultural food scene. It streamlines dining and menu management with real-time updates, dietary filters, and QR-accessible menus. It helps diners eat with confidence and restaurants manage with ease.",
-        role: "Full-Stack Developer",
+        role: "Product Manager / Full-Stack Developer",
         contributions: [
             "Developed customer menu interface with favorites system and Google Maps integration",
             "Partnered with designers to define feature requirements and UI specifications",
@@ -4788,9 +4792,13 @@ const projectsData = [
     }
 ];
 const ProjectCard = ({ project, index, onClick })=>{
+    const handleClick = ()=>{
+        if (project.detailPage) window.location.href = project.detailPage;
+        else onClick(project);
+    };
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: `project-card animate-fade-in-up delay-${index + 1}`,
-        onClick: ()=>onClick(project),
+        onClick: handleClick,
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "project-image",
@@ -4799,12 +4807,12 @@ const ProjectCard = ({ project, index, onClick })=>{
                     alt: project.title
                 }, void 0, false, {
                     fileName: "src/components/Projects.js",
-                    lineNumber: 82,
+                    lineNumber: 92,
                     columnNumber: 17
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/components/Projects.js",
-                lineNumber: 81,
+                lineNumber: 91,
                 columnNumber: 13
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -4815,7 +4823,7 @@ const ProjectCard = ({ project, index, onClick })=>{
                         children: String(project.id).padStart(2, '0')
                     }, void 0, false, {
                         fileName: "src/components/Projects.js",
-                        lineNumber: 85,
+                        lineNumber: 95,
                         columnNumber: 17
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
@@ -4823,15 +4831,15 @@ const ProjectCard = ({ project, index, onClick })=>{
                         children: project.title
                     }, void 0, false, {
                         fileName: "src/components/Projects.js",
-                        lineNumber: 86,
+                        lineNumber: 96,
                         columnNumber: 17
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                        className: "project-period",
-                        children: project.period
+                        className: "project-role-badge",
+                        children: project.role
                     }, void 0, false, {
                         fileName: "src/components/Projects.js",
-                        lineNumber: 87,
+                        lineNumber: 97,
                         columnNumber: 17
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -4842,7 +4850,7 @@ const ProjectCard = ({ project, index, onClick })=>{
                                     children: tech
                                 }, tech, false, {
                                     fileName: "src/components/Projects.js",
-                                    lineNumber: 90,
+                                    lineNumber: 100,
                                     columnNumber: 25
                                 }, undefined)),
                             project.techStack.length > 5 && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
@@ -4853,25 +4861,33 @@ const ProjectCard = ({ project, index, onClick })=>{
                                 ]
                             }, void 0, true, {
                                 fileName: "src/components/Projects.js",
-                                lineNumber: 93,
+                                lineNumber: 103,
                                 columnNumber: 25
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/components/Projects.js",
-                        lineNumber: 88,
+                        lineNumber: 98,
+                        columnNumber: 17
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: "project-period",
+                        children: project.period
+                    }, void 0, false, {
+                        fileName: "src/components/Projects.js",
+                        lineNumber: 106,
                         columnNumber: 17
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/Projects.js",
-                lineNumber: 84,
+                lineNumber: 94,
                 columnNumber: 13
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/Projects.js",
-        lineNumber: 77,
+        lineNumber: 87,
         columnNumber: 9
     }, undefined);
 };
@@ -4891,7 +4907,7 @@ const ProjectModal = ({ project, onClose })=>{
                     children: "\xd7"
                 }, void 0, false, {
                     fileName: "src/components/Projects.js",
-                    lineNumber: 107,
+                    lineNumber: 118,
                     columnNumber: 17
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -4902,7 +4918,7 @@ const ProjectModal = ({ project, onClose })=>{
                             children: String(project.id).padStart(2, '0')
                         }, void 0, false, {
                             fileName: "src/components/Projects.js",
-                            lineNumber: 110,
+                            lineNumber: 121,
                             columnNumber: 21
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
@@ -4910,7 +4926,7 @@ const ProjectModal = ({ project, onClose })=>{
                             children: project.title
                         }, void 0, false, {
                             fileName: "src/components/Projects.js",
-                            lineNumber: 111,
+                            lineNumber: 122,
                             columnNumber: 21
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
@@ -4918,7 +4934,7 @@ const ProjectModal = ({ project, onClose })=>{
                             children: project.subtitle
                         }, void 0, false, {
                             fileName: "src/components/Projects.js",
-                            lineNumber: 112,
+                            lineNumber: 123,
                             columnNumber: 21
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -4926,13 +4942,13 @@ const ProjectModal = ({ project, onClose })=>{
                             children: project.period
                         }, void 0, false, {
                             fileName: "src/components/Projects.js",
-                            lineNumber: 113,
+                            lineNumber: 124,
                             columnNumber: 21
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "src/components/Projects.js",
-                    lineNumber: 109,
+                    lineNumber: 120,
                     columnNumber: 17
                 }, undefined),
                 project.image && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -4942,12 +4958,12 @@ const ProjectModal = ({ project, onClose })=>{
                         alt: project.title
                     }, void 0, false, {
                         fileName: "src/components/Projects.js",
-                        lineNumber: 118,
+                        lineNumber: 129,
                         columnNumber: 25
                     }, undefined)
                 }, void 0, false, {
                     fileName: "src/components/Projects.js",
-                    lineNumber: 117,
+                    lineNumber: 128,
                     columnNumber: 21
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -4958,7 +4974,7 @@ const ProjectModal = ({ project, onClose })=>{
                             children: project.description
                         }, void 0, false, {
                             fileName: "src/components/Projects.js",
-                            lineNumber: 123,
+                            lineNumber: 134,
                             columnNumber: 21
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -4968,7 +4984,7 @@ const ProjectModal = ({ project, onClose })=>{
                                     children: "Role:"
                                 }, void 0, false, {
                                     fileName: "src/components/Projects.js",
-                                    lineNumber: 126,
+                                    lineNumber: 137,
                                     columnNumber: 25
                                 }, undefined),
                                 " ",
@@ -4976,7 +4992,7 @@ const ProjectModal = ({ project, onClose })=>{
                             ]
                         }, void 0, true, {
                             fileName: "src/components/Projects.js",
-                            lineNumber: 125,
+                            lineNumber: 136,
                             columnNumber: 21
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -4986,7 +5002,7 @@ const ProjectModal = ({ project, onClose })=>{
                                     children: "Key Contributions:"
                                 }, void 0, false, {
                                     fileName: "src/components/Projects.js",
-                                    lineNumber: 130,
+                                    lineNumber: 141,
                                     columnNumber: 25
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
@@ -4994,18 +5010,18 @@ const ProjectModal = ({ project, onClose })=>{
                                             children: contribution
                                         }, idx, false, {
                                             fileName: "src/components/Projects.js",
-                                            lineNumber: 133,
+                                            lineNumber: 144,
                                             columnNumber: 33
                                         }, undefined))
                                 }, void 0, false, {
                                     fileName: "src/components/Projects.js",
-                                    lineNumber: 131,
+                                    lineNumber: 142,
                                     columnNumber: 25
                                 }, undefined)
                             ]
                         }, void 0, true, {
                             fileName: "src/components/Projects.js",
-                            lineNumber: 129,
+                            lineNumber: 140,
                             columnNumber: 21
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -5015,7 +5031,7 @@ const ProjectModal = ({ project, onClose })=>{
                                     children: "Tech Stack:"
                                 }, void 0, false, {
                                     fileName: "src/components/Projects.js",
-                                    lineNumber: 139,
+                                    lineNumber: 150,
                                     columnNumber: 25
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -5025,18 +5041,18 @@ const ProjectModal = ({ project, onClose })=>{
                                             children: tech
                                         }, tech, false, {
                                             fileName: "src/components/Projects.js",
-                                            lineNumber: 142,
+                                            lineNumber: 153,
                                             columnNumber: 33
                                         }, undefined))
                                 }, void 0, false, {
                                     fileName: "src/components/Projects.js",
-                                    lineNumber: 140,
+                                    lineNumber: 151,
                                     columnNumber: 25
                                 }, undefined)
                             ]
                         }, void 0, true, {
                             fileName: "src/components/Projects.js",
-                            lineNumber: 138,
+                            lineNumber: 149,
                             columnNumber: 21
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -5050,7 +5066,7 @@ const ProjectModal = ({ project, onClose })=>{
                                     children: "View Live Demo \u2192"
                                 }, void 0, false, {
                                     fileName: "src/components/Projects.js",
-                                    lineNumber: 149,
+                                    lineNumber: 160,
                                     columnNumber: 29
                                 }, undefined),
                                 project.links.github && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
@@ -5061,30 +5077,30 @@ const ProjectModal = ({ project, onClose })=>{
                                     children: "View Code \u2192"
                                 }, void 0, false, {
                                     fileName: "src/components/Projects.js",
-                                    lineNumber: 154,
+                                    lineNumber: 165,
                                     columnNumber: 29
                                 }, undefined)
                             ]
                         }, void 0, true, {
                             fileName: "src/components/Projects.js",
-                            lineNumber: 147,
+                            lineNumber: 158,
                             columnNumber: 21
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "src/components/Projects.js",
-                    lineNumber: 122,
+                    lineNumber: 133,
                     columnNumber: 17
                 }, undefined)
             ]
         }, void 0, true, {
             fileName: "src/components/Projects.js",
-            lineNumber: 106,
+            lineNumber: 117,
             columnNumber: 13
         }, undefined)
     }, void 0, false, {
         fileName: "src/components/Projects.js",
-        lineNumber: 105,
+        lineNumber: 116,
         columnNumber: 9
     }, undefined);
 };
@@ -5110,7 +5126,7 @@ const Projects = ()=>{
                         children: "SELECTED PROJECTS"
                     }, void 0, false, {
                         fileName: "src/components/Projects.js",
-                        lineNumber: 179,
+                        lineNumber: 190,
                         columnNumber: 17
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
@@ -5118,13 +5134,13 @@ const Projects = ()=>{
                         children: "FEATURED WORK"
                     }, void 0, false, {
                         fileName: "src/components/Projects.js",
-                        lineNumber: 180,
+                        lineNumber: 191,
                         columnNumber: 17
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/Projects.js",
-                lineNumber: 178,
+                lineNumber: 189,
                 columnNumber: 13
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -5135,12 +5151,12 @@ const Projects = ()=>{
                         onClick: handleCardClick
                     }, project.id, false, {
                         fileName: "src/components/Projects.js",
-                        lineNumber: 184,
+                        lineNumber: 195,
                         columnNumber: 21
                     }, undefined))
             }, void 0, false, {
                 fileName: "src/components/Projects.js",
-                lineNumber: 182,
+                lineNumber: 193,
                 columnNumber: 13
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(ProjectModal, {
@@ -5148,13 +5164,13 @@ const Projects = ()=>{
                 onClose: handleCloseModal
             }, void 0, false, {
                 fileName: "src/components/Projects.js",
-                lineNumber: 192,
+                lineNumber: 203,
                 columnNumber: 13
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/Projects.js",
-        lineNumber: 177,
+        lineNumber: 188,
         columnNumber: 9
     }, undefined);
 };
@@ -5166,17 +5182,17 @@ $RefreshReg$(_c, "ProjectCard");
 $RefreshReg$(_c1, "ProjectModal");
 $RefreshReg$(_c2, "Projects");
 
-  $parcel$ReactRefreshHelpers$ec2f.postlude(module);
+  $parcel$ReactRefreshHelpers$cf23.postlude(module);
 } finally {
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"cgAOG":[function(require,module,exports,__globalThis) {
-var $parcel$ReactRefreshHelpers$ee46 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-$parcel$ReactRefreshHelpers$ee46.init();
+},{"react/jsx-dev-runtime":"eBmkw","react":"5Ahx5","@parcel/transformer-js/src/esmodule-helpers.js":"lWWK5","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"dXIaD"}],"cvPPH":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$5acb = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$5acb.init();
 var prevRefreshReg = globalThis.$RefreshReg$;
 var prevRefreshSig = globalThis.$RefreshSig$;
-$parcel$ReactRefreshHelpers$ee46.prelude(module);
+$parcel$ReactRefreshHelpers$5acb.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -5240,17 +5256,17 @@ exports.default = Contact;
 var _c;
 $RefreshReg$(_c, "Contact");
 
-  $parcel$ReactRefreshHelpers$ee46.postlude(module);
+  $parcel$ReactRefreshHelpers$5acb.postlude(module);
 } finally {
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"8pPOA":[function(require,module,exports,__globalThis) {
-var $parcel$ReactRefreshHelpers$bc7c = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-$parcel$ReactRefreshHelpers$bc7c.init();
+},{"react/jsx-dev-runtime":"eBmkw","react":"5Ahx5","@parcel/transformer-js/src/esmodule-helpers.js":"lWWK5","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"dXIaD"}],"3ejXZ":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$ebee = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$ebee.init();
 var prevRefreshReg = globalThis.$RefreshReg$;
 var prevRefreshSig = globalThis.$RefreshSig$;
-$parcel$ReactRefreshHelpers$bc7c.prelude(module);
+$parcel$ReactRefreshHelpers$ebee.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -5273,12 +5289,12 @@ exports.default = Footer;
 var _c;
 $RefreshReg$(_c, "Footer");
 
-  $parcel$ReactRefreshHelpers$bc7c.postlude(module);
+  $parcel$ReactRefreshHelpers$ebee.postlude(module);
 } finally {
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"lOjBx":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"eBmkw","react":"5Ahx5","@parcel/transformer-js/src/esmodule-helpers.js":"lWWK5","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"dXIaD"}],"aTOH7":[function(require,module,exports,__globalThis) {
 'use strict';
 function checkDCE() {
     /* global __REACT_DEVTOOLS_GLOBAL_HOOK__ */ if (typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ === 'undefined' || typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE !== 'function') return;
@@ -5294,7 +5310,7 @@ function checkDCE() {
 }
 module.exports = require("2b53550ce04dc092");
 
-},{"2b53550ce04dc092":"dztFz"}],"dztFz":[function(require,module,exports,__globalThis) {
+},{"2b53550ce04dc092":"1ZiuD"}],"1ZiuD":[function(require,module,exports,__globalThis) {
 /**
  * @license React
  * react-dom-client.development.js
@@ -20475,11 +20491,11 @@ module.exports = require("2b53550ce04dc092");
     "undefined" !== typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ && "function" === typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop && __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop(Error());
 })();
 
-},{"c31f9b99c1e288cf":"juvHo","c4c4bc2113e5c77f":"21dqq","772d609564cfd8f6":"j6uA9"}],"juvHo":[function(require,module,exports,__globalThis) {
+},{"c31f9b99c1e288cf":"bVOgS","c4c4bc2113e5c77f":"5Ahx5","772d609564cfd8f6":"gxcLp"}],"bVOgS":[function(require,module,exports,__globalThis) {
 'use strict';
 module.exports = require("ef03b89c8fe2794e");
 
-},{"ef03b89c8fe2794e":"RqdIf"}],"RqdIf":[function(require,module,exports,__globalThis) {
+},{"ef03b89c8fe2794e":"1fzGO"}],"1fzGO":[function(require,module,exports,__globalThis) {
 /**
  * @license React
  * scheduler.development.js
@@ -20726,7 +20742,7 @@ module.exports = require("ef03b89c8fe2794e");
     "undefined" !== typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ && "function" === typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop && __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop(Error());
 })();
 
-},{}],"j6uA9":[function(require,module,exports,__globalThis) {
+},{}],"gxcLp":[function(require,module,exports,__globalThis) {
 'use strict';
 function checkDCE() {
     /* global __REACT_DEVTOOLS_GLOBAL_HOOK__ */ if (typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ === 'undefined' || typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE !== 'function') return;
@@ -20742,7 +20758,7 @@ function checkDCE() {
 }
 module.exports = require("b0f0e6b9e8349dac");
 
-},{"b0f0e6b9e8349dac":"3iA9v"}],"3iA9v":[function(require,module,exports,__globalThis) {
+},{"b0f0e6b9e8349dac":"hjNGa"}],"hjNGa":[function(require,module,exports,__globalThis) {
 /**
  * @license React
  * react-dom.development.js
@@ -20919,6 +20935,6 @@ module.exports = require("b0f0e6b9e8349dac");
     "undefined" !== typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ && "function" === typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop && __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop(Error());
 })();
 
-},{"6f0162e9ab224cd4":"21dqq"}]},["2gh3G","8lqZg"], "8lqZg", "parcelRequire94c2", {}, null, null, "http://localhost:1234")
+},{"6f0162e9ab224cd4":"5Ahx5"}]},["bZPw4","9e0mc"], "9e0mc", "parcelRequire94c2", {}, null, null, "http://localhost:1234")
 
 //# sourceMappingURL=index.js.map

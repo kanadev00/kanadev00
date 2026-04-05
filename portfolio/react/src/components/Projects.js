@@ -7,9 +7,10 @@ const projectsData = [
         subtitle: "Product Management Platform for Handcraft Makers",
         period: "Sep 2025 - Nov 2025",
         icon: "🎨",
-        image: "/img/arvo-ad.webp",
+        image: "/img/arvo/arvo-ad.webp",
+        detailPage: "projects/arvo.html",
         description: "A web application empowering solo handcraft entrepreneurs to transform creativity into sustainable business. This platform addresses the critical challenges of cost tracking, inventory valuation, and pricing decisions. By centralizing financial data with AI-driven insights, it helps makers track profitability, optimize pricing strategies, and reduce administrative burden—freeing them to focus on their craft.",
-        role: "Co-Project Manager / Full-stack Developer",
+        role: "Product Manager / Co-Project Manager / Full-stack Developer",
         contributions: [
             "Led product planning and feature design with a customer-focused approach",
             "Provided significant contribution in analyzing and implementing business logic",
@@ -32,9 +33,10 @@ const projectsData = [
         subtitle: "Restaurant Menu Digitization Platform",
         period: "May 2025 - Jul 2025",
         icon: "🍽️",
-        image: "/img/delista-ad.webp",
+        image: "/img/delista/delista-ad.webp",
+        detailPage: "projects/delista.html",
         description: "B2B/B2C Web PWA for restaurant menu digitization. This solution accelerates digital transformation for restaurants using paper or PDF menus while addressing challenges faced by diners in Vancouver's diverse, multicultural food scene. It streamlines dining and menu management with real-time updates, dietary filters, and QR-accessible menus. It helps diners eat with confidence and restaurants manage with ease.",
-        role: "Full-Stack Developer",
+        role: "Product Manager / Full-Stack Developer",
         contributions: [
             "Developed customer menu interface with favorites system and Google Maps integration",
             "Partnered with designers to define feature requirements and UI specifications",
@@ -73,10 +75,18 @@ const projectsData = [
 ];
 
 const ProjectCard = ({ project, index, onClick }) => {
+    const handleClick = () => {
+        if (project.detailPage) {
+            window.location.href = project.detailPage;
+        } else {
+            onClick(project);
+        }
+    };
+
     return (
         <div
             className={`project-card animate-fade-in-up delay-${index + 1}`}
-            onClick={() => onClick(project)}
+            onClick={handleClick}
         >
             <div className="project-image">
                 <img src={project.image} alt={project.title} />
@@ -84,7 +94,7 @@ const ProjectCard = ({ project, index, onClick }) => {
             <div className="project-card-overlay">
                 <div className="project-number">{String(project.id).padStart(2, '0')}</div>
                 <h3 className="project-title">{project.title}</h3>
-                <p className="project-period">{project.period}</p>
+                <p className="project-role-badge">{project.role}</p>
                 <div className="project-tags">
                     {project.techStack.slice(0, 5).map((tech) => (
                         <span key={tech} className="tag">{tech}</span>
@@ -93,6 +103,7 @@ const ProjectCard = ({ project, index, onClick }) => {
                         <span className="tag">+{project.techStack.length - 5}</span>
                     )}
                 </div>
+                <span className="project-period">{project.period}</span>
             </div>
         </div>
     );
