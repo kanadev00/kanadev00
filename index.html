@@ -50,14 +50,17 @@
                 hamburger.classList.toggle('active');
                 navMenu.classList.toggle('active');
                 menuOverlay.classList.toggle('active');
-                body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : 'auto';
+                const isOpen = navMenu.classList.contains('active');
+                body.style.overflow = isOpen ? 'hidden' : '';
+                document.documentElement.style.overflow = isOpen ? 'hidden' : '';
             };
 
             const closeMenu = () => {
                 hamburger.classList.remove('active');
                 navMenu.classList.remove('active');
                 menuOverlay.classList.remove('active');
-                body.style.overflow = 'auto';
+                body.style.overflow = '';
+                document.documentElement.style.overflow = '';
             };
 
             hamburger.addEventListener('click', toggleMenu);
