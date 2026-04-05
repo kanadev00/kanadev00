@@ -1238,9 +1238,9 @@
 
 .hero-cta {
     display: flex;
-    flex-direction: column;
     gap: 20px;
-    align-items: stretch;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .cta-button {
