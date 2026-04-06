@@ -149,10 +149,6 @@
  .top-bar {
      background: var(--black);
      color: var(--white);
-     padding: 10px 40px;
-     display: flex;
-     justify-content: space-between;
-     align-items: center;
      font-size: 11px;
      font-family: 'Inter', sans-serif;
      letter-spacing: 0.5px;
@@ -165,6 +161,15 @@
      pointer-events: none;
      transform: translateY(-100%);
      transition: opacity 0.3s ease, transform 0.3s ease;
+ }
+
+ .top-bar-inner {
+     max-width: 1600px;
+     margin: 0 auto;
+     padding: 10px 40px;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
  }
 
  .top-bar.visible {
@@ -223,12 +228,17 @@
  /* Navigation */
  nav {
      background: var(--cream);
+     position: relative;
+     z-index: 100;
+ }
+
+ .nav-inner {
+     max-width: 1600px;
+     margin: 0 auto;
      padding: 20px 40px;
      display: flex;
      justify-content: flex-end;
      align-items: center;
-     position: relative;
-     z-index: 100;
  }
 
  .hamburger {
@@ -1147,7 +1157,7 @@
  }
 
  @media (max-width: 768px) {
-     .top-bar {
+     .top-bar-inner {
          flex-direction: row;
          gap: 10px;
          padding: 12px 20px;
@@ -1173,7 +1183,7 @@
          margin-left: 0;
      }
 
-     nav {
+     .nav-inner {
          padding: 15px 20px;
      }
 
