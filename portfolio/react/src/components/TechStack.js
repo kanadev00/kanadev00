@@ -58,11 +58,11 @@ const coreCompetencies = [
 const TechStack = () => {
     return (
         <section className="expertise-section" id="expertise">
-            <div className="section-header">
+            <div className="section-header animate-fade-in-up">
                 <div className="section-label">WHAT I DO</div>
                 <h2 className="section-title">EXPERTISE</h2>
             </div>
-            <div className="core-competencies-strip">
+            <div className="core-competencies-strip animate-fade-in-up delay-1">
                 <div className="core-competencies-label">CORE COMPETENCIES</div>
                 <div className="core-competencies-pills">
                     {coreCompetencies.map((item) => (
@@ -70,7 +70,7 @@ const TechStack = () => {
                     ))}
                 </div>
             </div>
-            <div className="technical-skills-label">TECHNICAL SKILLS</div>
+            <div className="technical-skills-label animate-fade-in-up delay-2">TECHNICAL SKILLS</div>
             <div className="expertise-grid">
                 {Object.entries(techStackData).map(([category, data]) => (
                     <TechStackCard key={category} category={category} data={data} />
