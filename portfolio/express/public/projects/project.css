@@ -7,6 +7,15 @@
   transform: translateY(0);
 }
 
+.top-bar .top-bar-inner {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 10px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 body {
   padding-top: 4rem;
 }
@@ -371,6 +380,10 @@ body {
 
   .container {
     padding: 0 20px;
+  }
+
+  .top-bar .top-bar-inner {
+    padding: 10px 20px;
   }
 
   .detail-overview {
