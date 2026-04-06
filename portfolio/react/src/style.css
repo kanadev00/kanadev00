@@ -12,7 +12,7 @@
      --black: #131314;
      --white: #FFFFFF;
      --cream: #FAF9F0;
-     --gray: #8B8B8B;
+     --gray: #5A5A5A;
      --light-gray: #E5E5E5;
      --blue: #2B5CE6;
      --orange: #D97757;
@@ -229,23 +229,22 @@
      padding: 10px;
  }
 
- .hamburger span {
-     width: 25px;
-     height: 2px;
-     background: var(--black);
-     transition: all 0.3s;
+ .hamburger i {
+     font-size: 22px;
+     color: var(--black);
+     transition: opacity 0.2s;
  }
 
- .hamburger.active span:nth-child(1) {
-     transform: rotate(45deg) translate(5px, 5px);
+ .hamburger .hamburger-close {
+     display: none;
  }
 
- .hamburger.active span:nth-child(2) {
-     opacity: 0;
+ .hamburger.active .hamburger-open {
+     display: none;
  }
 
- .hamburger.active span:nth-child(3) {
-     transform: rotate(-45deg) translate(6px, -6px);
+ .hamburger.active .hamburger-close {
+     display: block;
  }
 
  .nav-menu {
@@ -482,9 +481,18 @@
 
  /* Projects Grid */
  .projects-grid {
-     display: grid;
-     grid-template-columns: repeat(3, 1fr);
+     display: flex;
+     flex-direction: row;
+     overflow-x: auto;
      gap: 40px;
+     scroll-snap-type: x mandatory;
+     -webkit-overflow-scrolling: touch;
+     padding-bottom: 12px;
+ }
+
+ .projects-grid .project-card {
+     flex: 0 0 360px;
+     scroll-snap-align: start;
  }
 
  .project-card {
@@ -998,7 +1006,7 @@
 
  .contact-section p {
      font-size: 20px;
-     margin-bottom: 50px;
+     margin-bottom: 45px;
      max-width: 600px;
      margin-left: auto;
      margin-right: auto;
@@ -1009,6 +1017,12 @@
      gap: 20px;
      justify-content: center;
      flex-wrap: wrap;
+ }
+
+ .contact-buttons .contact-button {
+     width: 320px;
+     justify-content: center;
+     white-space: nowrap;
  }
 
  .contact-button {
@@ -1024,8 +1038,16 @@
      font-family: 'Inter', sans-serif;
      transition: all 0.3s;
      text-decoration: none;
-     display: inline-block;
+     display: inline-flex;
+     align-items: center;
+     gap: 8px;
      border-radius: 8px;
+ }
+
+ .contact-button svg {
+     width: 22px;
+     height: 22px;
+     margin-right: 4px;
  }
 
  .contact-button:hover {
@@ -1055,6 +1077,23 @@
      text-align: center;
      font-size: 12px;
      font-family: 'Inter', sans-serif;
+ }
+
+ .footer-icons {
+     display: flex;
+     justify-content: center;
+     gap: 16px;
+     margin-bottom: 16px;
+ }
+
+ .footer-icons a {
+     color: var(--white);
+     opacity: 0.6;
+     transition: opacity 0.2s ease;
+ }
+
+ .footer-icons a:hover {
+     opacity: 1;
  }
 
  @media (max-width: 1200px) {
@@ -1220,7 +1259,7 @@
 
 /* Hero Section */
 .hero-section {
-    padding: 100px 40px;
+    padding: 65px 40px;
     background: var(--cream);
     min-height: 60vh;
     display: flex;
@@ -1543,19 +1582,19 @@
     }
 
     .featured-section {
-        padding: 60px 20px;
+        padding: 30px 20px;
     }
 
     .expertise-section {
-        padding: 60px 20px;
+        padding: 30px 20px;
     }
 
     .about-section {
-        padding: 60px 20px;
+        padding: 30px 20px;
     }
 
     .contact-section {
-        padding: 60px 20px;
+        padding: 30px 20px;
     }
 
     .contact-section h2 {
@@ -1580,26 +1619,32 @@
     }
 }
 
-/* Mouse Following Dots */
-.mouse-dot {
+/* Hero Ripple Effect */
+.ripple-effect {
     position: absolute;
-    width: 8px;
-    height: 8px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
     pointer-events: none;
     z-index: 1;
-    opacity: 0.4;
-    transition: opacity 0.3s ease;
-    will-change: transform;
+    transform: translate(-50%, -50%) scale(0);
+    animation: rippleGrow 1s ease-out forwards;
 }
 
-.hero-section:hover .mouse-dot {
-    opacity: 0.6;
+@keyframes rippleGrow {
+    0% {
+        opacity: 0.35;
+        transform: translate(-50%, -50%) scale(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(1);
+    }
 }
 
-/* Responsive: Hide dots on mobile to reduce clutter */
+/* Responsive: Hide ripples on mobile */
 @media (max-width: 768px) {
-    .mouse-dot {
+    .ripple-effect {
         display: none;
     }
 }

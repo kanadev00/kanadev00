@@ -2,81 +2,39 @@ import React, { useEffect, useRef } from 'react';
 
 const Hero = () => {
     const heroRef = useRef(null);
-    const dotsRef = useRef([]);
 
     useEffect(() => {
         const hero = heroRef.current;
         if (!hero) return;
 
         const colors = ['#2B5CE6', '#D97757', '#8B8B8B']; // blue, orange, gray from site palette
-        const dots = [];
-        const mousePos = { x: 0, y: 0 };
-        const dotCount = 15;
+        let colorIndex = 0;
+        let lastRippleTime = 0;
 
-        // Create dots
-        for (let i = 0; i < dotCount; i++) {
-            const dot = document.createElement('div');
-            dot.className = 'mouse-dot';
-            dot.style.backgroundColor = colors[i % colors.length];
-            hero.appendChild(dot);
-
-            dots.push({
-                element: dot,
-                x: 0,
-                y: 0,
-                targetX: 0,
-                targetY: 0,
-                delay: i * 0.03
-            });
-        }
-
-        dotsRef.current = dots;
-
-        // Mouse move handler
         const handleMouseMove = (e) => {
+            const now = Date.now();
+            if (now - lastRippleTime < 80) return; // throttle to ~12 ripples/sec
+            lastRippleTime = now;
+
             const rect = hero.getBoundingClientRect();
-            mousePos.x = e.clientX - rect.left;
-            mousePos.y = e.clientY - rect.top;
-        };
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
 
-        // Animation loop
-        let animationFrameId;
-        const animate = () => {
-            dots.forEach((dot, index) => {
-                // Each dot follows the previous one (or the mouse for the first dot)
-                if (index === 0) {
-                    dot.targetX = mousePos.x;
-                    dot.targetY = mousePos.y;
-                } else {
-                    dot.targetX = dots[index - 1].x;
-                    dot.targetY = dots[index - 1].y;
-                }
+            const ripple = document.createElement('div');
+            ripple.className = 'ripple-effect';
+            ripple.style.left = `${x}px`;
+            ripple.style.top = `${y}px`;
+            ripple.style.backgroundColor = colors[colorIndex % colors.length];
+            colorIndex++;
 
-                // Smooth interpolation
-                const speed = 0.15 - (index * 0.005); // Gradually slower for trailing effect
-                dot.x += (dot.targetX - dot.x) * speed;
-                dot.y += (dot.targetY - dot.y) * speed;
-
-                // Update position
-                dot.element.style.left = `${dot.x}px`;
-                dot.element.style.top = `${dot.y}px`;
-            });
-
-            animationFrameId = requestAnimationFrame(animate);
+            hero.appendChild(ripple);
+            ripple.addEventListener('animationend', () => ripple.remove());
         };
 
         hero.addEventListener('mousemove', handleMouseMove);
-        animate();
 
-        // Cleanup
         return () => {
             hero.removeEventListener('mousemove', handleMouseMove);
-            cancelAnimationFrame(animationFrameId);
-            dots.forEach(dot => {
-                if (dot.element.parentNode) {
-                    dot.element.parentNode.removeChild(dot.element);
-                }
-            });
         };
     }, []);
 

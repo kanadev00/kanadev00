@@ -1,8 +1,35 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 const projectsData = [
     {
         id: 1,
+        title: "Reano",
+        subtitle: "AI-Powered Home Design & AR Room Visualization App",
+        period: "Jan 2026 - Apr 2026",
+        icon: "🏠",
+        image: "/img/reano-ad.webp",
+        detailPage: "projects/reano.html",
+        description: "A cross-platform mobile app (iOS & Android) that bridges the gap between interior design inspiration and real purchasing decisions. Users build AI-powered Style Boards from their inspiration photos, visualize furniture in their actual rooms via AR, and virtually repaint walls — turning scattered ideas into confident, spatial choices.",
+        role: "Co-Project Lead / Product Planner / Full-Stack Developer",
+        contributions: [
+            "Shaped the core product vision from user research and competitive analysis into a focused MVP across a 12-week capstone timeline",
+            "Led sprint planning and cross-team alignment between 4 developers and 7 designers",
+            "Implemented AI furniture recommendation system using OpenAI text-embedding-3-small with cosine similarity ranking",
+            "Built a custom React Native polling hook to withhold render until recommendation results are stable",
+            "Contributed to furniture listing and filtering UI with recommendation ranking and profile-based preferences"
+        ],
+        techStack: [
+            "React Native", "TypeScript", "Expo", "NativeWind", "TanStack Query",
+            "Zustand", "Viro (AR)", "Hono", "Node.js", "Drizzle ORM",
+            "PostgreSQL", "OpenAI API", "Replicate", "AWS EC2", "AWS S3", "PM2"
+        ],
+        links: {
+            demo: "https://reano.pages.dev",
+            github: "https://github.com/keipalg/reano"
+        },
+    },
+    {
+        id: 2,
         title: "Arvo",
         subtitle: "Product Management Platform for Handcraft Makers",
         period: "Sep 2025 - Nov 2025",
@@ -28,7 +55,7 @@ const projectsData = [
         },
     },
     {
-        id: 2,
+        id: 3,
         title: "Delista",
         subtitle: "Restaurant Menu Digitization Platform",
         period: "May 2025 - Jul 2025",
@@ -52,20 +79,23 @@ const projectsData = [
         },
     },
     {
-        id: 3,
+        id: 4,
         title: "Data for Good Vancouver Website",
         subtitle: "High UX Quality & Conversion Improvement",
         period: "Feb 2025 - Apr 2025",
         icon: "📈",
         image: "/img/dfg-website-renewal.png",
+        detailPage: "projects/dfg.html",
         description: "Website renewal and content update project for Data for Good Vancouver designed to attract both clients and volunteers.",
-        role: "UX/UI Design / Frontend Web Developer",
+        role: "UX/UI Designer / Frontend Web Developer",
         contributions: [
-            "Website Design, Contents and Illustrations Creation, Development & Operations",
+            "Redesigned information architecture and user flows based on stakeholder interviews",
+            "Created custom visuals aligned with content to improve information absorption",
+            "Reduced copy to essentials, minimizing drop-off before calls to action",
             "Delivered website renewal that increased inquiries by 4.5x",
         ],
         techStack: [
-            "HTML", "CSS", "Wordpress", "Figma", "Adobe Photoshop", "Adobe Illustrator"
+            "HTML", "CSS", "WordPress", "Figma", "Adobe Photoshop", "Adobe Illustrator"
         ],
         links: {
             demo: "https://vancouver.dataforgood.ca/",

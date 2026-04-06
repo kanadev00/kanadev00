@@ -1889,7 +1889,6 @@ var _s = $RefreshSig$();
 const Hero = ()=>{
     _s();
     const heroRef = (0, _react.useRef)(null);
-    const dotsRef = (0, _react.useRef)([]);
     (0, _react.useEffect)(()=>{
         const hero = heroRef.current;
         if (!hero) return;
@@ -1898,65 +1897,27 @@ const Hero = ()=>{
             '#D97757',
             '#8B8B8B'
         ]; // blue, orange, gray from site palette
-        const dots = [];
-        const mousePos = {
-            x: 0,
-            y: 0
-        };
-        const dotCount = 15;
-        // Create dots
-        for(let i = 0; i < dotCount; i++){
-            const dot = document.createElement('div');
-            dot.className = 'mouse-dot';
-            dot.style.backgroundColor = colors[i % colors.length];
-            hero.appendChild(dot);
-            dots.push({
-                element: dot,
-                x: 0,
-                y: 0,
-                targetX: 0,
-                targetY: 0,
-                delay: i * 0.03
-            });
-        }
-        dotsRef.current = dots;
-        // Mouse move handler
+        let colorIndex = 0;
+        let lastRippleTime = 0;
         const handleMouseMove = (e)=>{
+            const now = Date.now();
+            if (now - lastRippleTime < 80) return; // throttle to ~12 ripples/sec
+            lastRippleTime = now;
             const rect = hero.getBoundingClientRect();
-            mousePos.x = e.clientX - rect.left;
-            mousePos.y = e.clientY - rect.top;
-        };
-        // Animation loop
-        let animationFrameId;
-        const animate = ()=>{
-            dots.forEach((dot, index)=>{
-                // Each dot follows the previous one (or the mouse for the first dot)
-                if (index === 0) {
-                    dot.targetX = mousePos.x;
-                    dot.targetY = mousePos.y;
-                } else {
-                    dot.targetX = dots[index - 1].x;
-                    dot.targetY = dots[index - 1].y;
-                }
-                // Smooth interpolation
-                const speed = 0.15 - index * 0.005; // Gradually slower for trailing effect
-                dot.x += (dot.targetX - dot.x) * speed;
-                dot.y += (dot.targetY - dot.y) * speed;
-                // Update position
-                dot.element.style.left = `${dot.x}px`;
-                dot.element.style.top = `${dot.y}px`;
-            });
-            animationFrameId = requestAnimationFrame(animate);
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            const ripple = document.createElement('div');
+            ripple.className = 'ripple-effect';
+            ripple.style.left = `${x}px`;
+            ripple.style.top = `${y}px`;
+            ripple.style.backgroundColor = colors[colorIndex % colors.length];
+            colorIndex++;
+            hero.appendChild(ripple);
+            ripple.addEventListener('animationend', ()=>ripple.remove());
         };
         hero.addEventListener('mousemove', handleMouseMove);
-        animate();
-        // Cleanup
         return ()=>{
             hero.removeEventListener('mousemove', handleMouseMove);
-            cancelAnimationFrame(animationFrameId);
-            dots.forEach((dot)=>{
-                if (dot.element.parentNode) dot.element.parentNode.removeChild(dot.element);
-            });
         };
     }, []);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("section", {
@@ -1970,7 +1931,7 @@ const Hero = ()=>{
                     children: "KANAKO TAGA"
                 }, void 0, false, {
                     fileName: "src/components/Hero.js",
-                    lineNumber: 86,
+                    lineNumber: 44,
                     columnNumber: 17
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -1981,7 +1942,7 @@ const Hero = ()=>{
                             children: "PRODUCT MANAGER"
                         }, void 0, false, {
                             fileName: "src/components/Hero.js",
-                            lineNumber: 90,
+                            lineNumber: 48,
                             columnNumber: 21
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
@@ -1989,7 +1950,7 @@ const Hero = ()=>{
                             children: "\u2022"
                         }, void 0, false, {
                             fileName: "src/components/Hero.js",
-                            lineNumber: 91,
+                            lineNumber: 49,
                             columnNumber: 21
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
@@ -1997,13 +1958,13 @@ const Hero = ()=>{
                             children: "FULL-STACK DEVELOPER"
                         }, void 0, false, {
                             fileName: "src/components/Hero.js",
-                            lineNumber: 92,
+                            lineNumber: 50,
                             columnNumber: 21
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "src/components/Hero.js",
-                    lineNumber: 89,
+                    lineNumber: 47,
                     columnNumber: 17
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -2011,7 +1972,7 @@ const Hero = ()=>{
                     children: "Leveraging 9+ years of IT leadership to build scalable, customer-centric applications, with a long-term business mindset."
                 }, void 0, false, {
                     fileName: "src/components/Hero.js",
-                    lineNumber: 94,
+                    lineNumber: 52,
                     columnNumber: 17
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -2023,7 +1984,7 @@ const Hero = ()=>{
                             children: "View Projects"
                         }, void 0, false, {
                             fileName: "src/components/Hero.js",
-                            lineNumber: 98,
+                            lineNumber: 56,
                             columnNumber: 21
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
@@ -2032,28 +1993,28 @@ const Hero = ()=>{
                             children: "Get In Touch"
                         }, void 0, false, {
                             fileName: "src/components/Hero.js",
-                            lineNumber: 99,
+                            lineNumber: 57,
                             columnNumber: 21
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "src/components/Hero.js",
-                    lineNumber: 97,
+                    lineNumber: 55,
                     columnNumber: 17
                 }, undefined)
             ]
         }, void 0, true, {
             fileName: "src/components/Hero.js",
-            lineNumber: 85,
+            lineNumber: 43,
             columnNumber: 13
         }, undefined)
     }, void 0, false, {
         fileName: "src/components/Hero.js",
-        lineNumber: 84,
+        lineNumber: 42,
         columnNumber: 9
     }, undefined);
 };
-_s(Hero, "iayxUQZX2eKP755cI7owRGR1XKU=");
+_s(Hero, "rS7LcCXjly7/pTs1LPmN/oyd16w=");
 _c = Hero;
 exports.default = Hero;
 var _c;
@@ -4754,11 +4715,50 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
 var _s = $RefreshSig$();
 const projectsData = [
     {
         id: 1,
+        title: "Reano",
+        subtitle: "AI-Powered Home Design & AR Room Visualization App",
+        period: "Jan 2026 - Apr 2026",
+        icon: "\uD83C\uDFE0",
+        image: "/img/reano-ad.webp",
+        detailPage: "projects/reano.html",
+        description: "A cross-platform mobile app (iOS & Android) that bridges the gap between interior design inspiration and real purchasing decisions. Users build AI-powered Style Boards from their inspiration photos, visualize furniture in their actual rooms via AR, and virtually repaint walls \u2014 turning scattered ideas into confident, spatial choices.",
+        role: "Co-Project Lead / Product Planner / Full-Stack Developer",
+        contributions: [
+            "Shaped the core product vision from user research and competitive analysis into a focused MVP across a 12-week capstone timeline",
+            "Led sprint planning and cross-team alignment between 4 developers and 7 designers",
+            "Implemented AI furniture recommendation system using OpenAI text-embedding-3-small with cosine similarity ranking",
+            "Built a custom React Native polling hook to withhold render until recommendation results are stable",
+            "Contributed to furniture listing and filtering UI with recommendation ranking and profile-based preferences"
+        ],
+        techStack: [
+            "React Native",
+            "TypeScript",
+            "Expo",
+            "NativeWind",
+            "TanStack Query",
+            "Zustand",
+            "Viro (AR)",
+            "Hono",
+            "Node.js",
+            "Drizzle ORM",
+            "PostgreSQL",
+            "OpenAI API",
+            "Replicate",
+            "AWS EC2",
+            "AWS S3",
+            "PM2"
+        ],
+        links: {
+            demo: "https://reano.pages.dev",
+            github: "https://github.com/keipalg/reano"
+        }
+    },
+    {
+        id: 2,
         title: "Arvo",
         subtitle: "Product Management Platform for Handcraft Makers",
         period: "Sep 2025 - Nov 2025",
@@ -4795,7 +4795,7 @@ const projectsData = [
         }
     },
     {
-        id: 2,
+        id: 3,
         title: "Delista",
         subtitle: "Restaurant Menu Digitization Platform",
         period: "May 2025 - Jul 2025",
@@ -4823,22 +4823,25 @@ const projectsData = [
         }
     },
     {
-        id: 3,
+        id: 4,
         title: "Data for Good Vancouver Website",
         subtitle: "High UX Quality & Conversion Improvement",
         period: "Feb 2025 - Apr 2025",
         icon: "\uD83D\uDCC8",
         image: "/img/dfg-website-renewal.png",
+        detailPage: "projects/dfg.html",
         description: "Website renewal and content update project for Data for Good Vancouver designed to attract both clients and volunteers.",
-        role: "UX/UI Design / Frontend Web Developer",
+        role: "UX/UI Designer / Frontend Web Developer",
         contributions: [
-            "Website Design, Contents and Illustrations Creation, Development & Operations",
+            "Redesigned information architecture and user flows based on stakeholder interviews",
+            "Created custom visuals aligned with content to improve information absorption",
+            "Reduced copy to essentials, minimizing drop-off before calls to action",
             "Delivered website renewal that increased inquiries by 4.5x"
         ],
         techStack: [
             "HTML",
             "CSS",
-            "Wordpress",
+            "WordPress",
             "Figma",
             "Adobe Photoshop",
             "Adobe Illustrator"
@@ -4865,12 +4868,12 @@ const ProjectCard = ({ project, index, onClick })=>{
                     alt: project.title
                 }, void 0, false, {
                     fileName: "src/components/Projects.js",
-                    lineNumber: 92,
+                    lineNumber: 122,
                     columnNumber: 17
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/components/Projects.js",
-                lineNumber: 91,
+                lineNumber: 121,
                 columnNumber: 13
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -4881,7 +4884,7 @@ const ProjectCard = ({ project, index, onClick })=>{
                         children: String(project.id).padStart(2, '0')
                     }, void 0, false, {
                         fileName: "src/components/Projects.js",
-                        lineNumber: 95,
+                        lineNumber: 125,
                         columnNumber: 17
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
@@ -4889,7 +4892,7 @@ const ProjectCard = ({ project, index, onClick })=>{
                         children: project.title
                     }, void 0, false, {
                         fileName: "src/components/Projects.js",
-                        lineNumber: 96,
+                        lineNumber: 126,
                         columnNumber: 17
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -4897,7 +4900,7 @@ const ProjectCard = ({ project, index, onClick })=>{
                         children: project.role
                     }, void 0, false, {
                         fileName: "src/components/Projects.js",
-                        lineNumber: 97,
+                        lineNumber: 127,
                         columnNumber: 17
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -4908,7 +4911,7 @@ const ProjectCard = ({ project, index, onClick })=>{
                                     children: tech
                                 }, tech, false, {
                                     fileName: "src/components/Projects.js",
-                                    lineNumber: 100,
+                                    lineNumber: 130,
                                     columnNumber: 25
                                 }, undefined)),
                             project.techStack.length > 5 && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
@@ -4919,13 +4922,13 @@ const ProjectCard = ({ project, index, onClick })=>{
                                 ]
                             }, void 0, true, {
                                 fileName: "src/components/Projects.js",
-                                lineNumber: 103,
+                                lineNumber: 133,
                                 columnNumber: 25
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/components/Projects.js",
-                        lineNumber: 98,
+                        lineNumber: 128,
                         columnNumber: 17
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
@@ -4933,19 +4936,19 @@ const ProjectCard = ({ project, index, onClick })=>{
                         children: project.period
                     }, void 0, false, {
                         fileName: "src/components/Projects.js",
-                        lineNumber: 106,
+                        lineNumber: 136,
                         columnNumber: 17
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/Projects.js",
-                lineNumber: 94,
+                lineNumber: 124,
                 columnNumber: 13
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/Projects.js",
-        lineNumber: 87,
+        lineNumber: 117,
         columnNumber: 9
     }, undefined);
 };
@@ -4965,7 +4968,7 @@ const ProjectModal = ({ project, onClose })=>{
                     children: "\xd7"
                 }, void 0, false, {
                     fileName: "src/components/Projects.js",
-                    lineNumber: 118,
+                    lineNumber: 148,
                     columnNumber: 17
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -4976,7 +4979,7 @@ const ProjectModal = ({ project, onClose })=>{
                             children: String(project.id).padStart(2, '0')
                         }, void 0, false, {
                             fileName: "src/components/Projects.js",
-                            lineNumber: 121,
+                            lineNumber: 151,
                             columnNumber: 21
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
@@ -4984,7 +4987,7 @@ const ProjectModal = ({ project, onClose })=>{
                             children: project.title
                         }, void 0, false, {
                             fileName: "src/components/Projects.js",
-                            lineNumber: 122,
+                            lineNumber: 152,
                             columnNumber: 21
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
@@ -4992,7 +4995,7 @@ const ProjectModal = ({ project, onClose })=>{
                             children: project.subtitle
                         }, void 0, false, {
                             fileName: "src/components/Projects.js",
-                            lineNumber: 123,
+                            lineNumber: 153,
                             columnNumber: 21
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -5000,13 +5003,13 @@ const ProjectModal = ({ project, onClose })=>{
                             children: project.period
                         }, void 0, false, {
                             fileName: "src/components/Projects.js",
-                            lineNumber: 124,
+                            lineNumber: 154,
                             columnNumber: 21
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "src/components/Projects.js",
-                    lineNumber: 120,
+                    lineNumber: 150,
                     columnNumber: 17
                 }, undefined),
                 project.image && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -5016,12 +5019,12 @@ const ProjectModal = ({ project, onClose })=>{
                         alt: project.title
                     }, void 0, false, {
                         fileName: "src/components/Projects.js",
-                        lineNumber: 129,
+                        lineNumber: 159,
                         columnNumber: 25
                     }, undefined)
                 }, void 0, false, {
                     fileName: "src/components/Projects.js",
-                    lineNumber: 128,
+                    lineNumber: 158,
                     columnNumber: 21
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -5032,7 +5035,7 @@ const ProjectModal = ({ project, onClose })=>{
                             children: project.description
                         }, void 0, false, {
                             fileName: "src/components/Projects.js",
-                            lineNumber: 134,
+                            lineNumber: 164,
                             columnNumber: 21
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -5042,7 +5045,7 @@ const ProjectModal = ({ project, onClose })=>{
                                     children: "Role:"
                                 }, void 0, false, {
                                     fileName: "src/components/Projects.js",
-                                    lineNumber: 137,
+                                    lineNumber: 167,
                                     columnNumber: 25
                                 }, undefined),
                                 " ",
@@ -5050,7 +5053,7 @@ const ProjectModal = ({ project, onClose })=>{
                             ]
                         }, void 0, true, {
                             fileName: "src/components/Projects.js",
-                            lineNumber: 136,
+                            lineNumber: 166,
                             columnNumber: 21
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -5060,7 +5063,7 @@ const ProjectModal = ({ project, onClose })=>{
                                     children: "Key Contributions:"
                                 }, void 0, false, {
                                     fileName: "src/components/Projects.js",
-                                    lineNumber: 141,
+                                    lineNumber: 171,
                                     columnNumber: 25
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
@@ -5068,18 +5071,18 @@ const ProjectModal = ({ project, onClose })=>{
                                             children: contribution
                                         }, idx, false, {
                                             fileName: "src/components/Projects.js",
-                                            lineNumber: 144,
+                                            lineNumber: 174,
                                             columnNumber: 33
                                         }, undefined))
                                 }, void 0, false, {
                                     fileName: "src/components/Projects.js",
-                                    lineNumber: 142,
+                                    lineNumber: 172,
                                     columnNumber: 25
                                 }, undefined)
                             ]
                         }, void 0, true, {
                             fileName: "src/components/Projects.js",
-                            lineNumber: 140,
+                            lineNumber: 170,
                             columnNumber: 21
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -5089,7 +5092,7 @@ const ProjectModal = ({ project, onClose })=>{
                                     children: "Tech Stack:"
                                 }, void 0, false, {
                                     fileName: "src/components/Projects.js",
-                                    lineNumber: 150,
+                                    lineNumber: 180,
                                     columnNumber: 25
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -5099,18 +5102,18 @@ const ProjectModal = ({ project, onClose })=>{
                                             children: tech
                                         }, tech, false, {
                                             fileName: "src/components/Projects.js",
-                                            lineNumber: 153,
+                                            lineNumber: 183,
                                             columnNumber: 33
                                         }, undefined))
                                 }, void 0, false, {
                                     fileName: "src/components/Projects.js",
-                                    lineNumber: 151,
+                                    lineNumber: 181,
                                     columnNumber: 25
                                 }, undefined)
                             ]
                         }, void 0, true, {
                             fileName: "src/components/Projects.js",
-                            lineNumber: 149,
+                            lineNumber: 179,
                             columnNumber: 21
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -5124,7 +5127,7 @@ const ProjectModal = ({ project, onClose })=>{
                                     children: "View Live Demo \u2192"
                                 }, void 0, false, {
                                     fileName: "src/components/Projects.js",
-                                    lineNumber: 160,
+                                    lineNumber: 190,
                                     columnNumber: 29
                                 }, undefined),
                                 project.links.github && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
@@ -5135,30 +5138,30 @@ const ProjectModal = ({ project, onClose })=>{
                                     children: "View Code \u2192"
                                 }, void 0, false, {
                                     fileName: "src/components/Projects.js",
-                                    lineNumber: 165,
+                                    lineNumber: 195,
                                     columnNumber: 29
                                 }, undefined)
                             ]
                         }, void 0, true, {
                             fileName: "src/components/Projects.js",
-                            lineNumber: 158,
+                            lineNumber: 188,
                             columnNumber: 21
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "src/components/Projects.js",
-                    lineNumber: 133,
+                    lineNumber: 163,
                     columnNumber: 17
                 }, undefined)
             ]
         }, void 0, true, {
             fileName: "src/components/Projects.js",
-            lineNumber: 117,
+            lineNumber: 147,
             columnNumber: 13
         }, undefined)
     }, void 0, false, {
         fileName: "src/components/Projects.js",
-        lineNumber: 116,
+        lineNumber: 146,
         columnNumber: 9
     }, undefined);
 };
@@ -5184,7 +5187,7 @@ const Projects = ()=>{
                         children: "SELECTED PROJECTS"
                     }, void 0, false, {
                         fileName: "src/components/Projects.js",
-                        lineNumber: 190,
+                        lineNumber: 220,
                         columnNumber: 17
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
@@ -5192,13 +5195,13 @@ const Projects = ()=>{
                         children: "FEATURED WORK"
                     }, void 0, false, {
                         fileName: "src/components/Projects.js",
-                        lineNumber: 191,
+                        lineNumber: 221,
                         columnNumber: 17
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/Projects.js",
-                lineNumber: 189,
+                lineNumber: 219,
                 columnNumber: 13
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -5209,12 +5212,12 @@ const Projects = ()=>{
                         onClick: handleCardClick
                     }, project.id, false, {
                         fileName: "src/components/Projects.js",
-                        lineNumber: 195,
+                        lineNumber: 225,
                         columnNumber: 21
                     }, undefined))
             }, void 0, false, {
                 fileName: "src/components/Projects.js",
-                lineNumber: 193,
+                lineNumber: 223,
                 columnNumber: 13
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(ProjectModal, {
@@ -5222,13 +5225,13 @@ const Projects = ()=>{
                 onClose: handleCloseModal
             }, void 0, false, {
                 fileName: "src/components/Projects.js",
-                lineNumber: 203,
+                lineNumber: 233,
                 columnNumber: 13
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/Projects.js",
-        lineNumber: 188,
+        lineNumber: 218,
         columnNumber: 9
     }, undefined);
 };
@@ -5279,8 +5282,28 @@ const Contact = ()=>{
                         target: "_blank",
                         rel: "noopener noreferrer",
                         className: "contact-button",
-                        children: "Connect on LinkedIn"
-                    }, void 0, false, {
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
+                                xmlns: "http://www.w3.org/2000/svg",
+                                viewBox: "0 0 24 24",
+                                fill: "currentColor",
+                                width: "18",
+                                height: "18",
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+                                    d: "M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                                }, void 0, false, {
+                                    fileName: "src/components/Contact.js",
+                                    lineNumber: 16,
+                                    columnNumber: 25
+                                }, undefined)
+                            }, void 0, false, {
+                                fileName: "src/components/Contact.js",
+                                lineNumber: 15,
+                                columnNumber: 21
+                            }, undefined),
+                            "Connect on LinkedIn"
+                        ]
+                    }, void 0, true, {
                         fileName: "src/components/Contact.js",
                         lineNumber: 11,
                         columnNumber: 17
@@ -5290,10 +5313,30 @@ const Contact = ()=>{
                         target: "_blank",
                         rel: "noopener noreferrer",
                         className: "contact-button secondary",
-                        children: "View GitHub"
-                    }, void 0, false, {
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
+                                xmlns: "http://www.w3.org/2000/svg",
+                                viewBox: "0 0 24 24",
+                                fill: "currentColor",
+                                width: "18",
+                                height: "18",
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+                                    d: "M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
+                                }, void 0, false, {
+                                    fileName: "src/components/Contact.js",
+                                    lineNumber: 25,
+                                    columnNumber: 25
+                                }, undefined)
+                            }, void 0, false, {
+                                fileName: "src/components/Contact.js",
+                                lineNumber: 24,
+                                columnNumber: 21
+                            }, undefined),
+                            "View GitHub"
+                        ]
+                    }, void 0, true, {
                         fileName: "src/components/Contact.js",
-                        lineNumber: 17,
+                        lineNumber: 20,
                         columnNumber: 17
                     }, undefined)
                 ]

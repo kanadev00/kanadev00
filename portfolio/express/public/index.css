@@ -12,7 +12,7 @@ html, body {
   --black: #131314;
   --white: #fff;
   --cream: #faf9f0;
-  --gray: #8b8b8b;
+  --gray: #5a5a5a;
   --light-gray: #e5e5e5;
   --blue: #2b5ce6;
   --orange: #d97757;
@@ -228,23 +228,18 @@ nav {
   display: none;
 }
 
-.hamburger span {
-  background: var(--black);
-  width: 25px;
-  height: 2px;
-  transition: all .3s;
+.hamburger i {
+  color: var(--black);
+  font-size: 28px;
+  transition: opacity .2s;
 }
 
-.hamburger.active span:first-child {
-  transform: rotate(45deg)translate(5px, 5px);
+.hamburger .hamburger-close, .hamburger.active .hamburger-open {
+  display: none;
 }
 
-.hamburger.active span:nth-child(2) {
-  opacity: 0;
-}
-
-.hamburger.active span:nth-child(3) {
-  transform: rotate(-45deg)translate(6px, -6px);
+.hamburger.active .hamburger-close {
+  display: block;
 }
 
 .nav-menu {
@@ -468,9 +463,18 @@ h1 {
 }
 
 .projects-grid {
-  grid-template-columns: repeat(3, 1fr);
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  flex-direction: row;
   gap: 40px;
-  display: grid;
+  padding-bottom: 12px;
+  display: flex;
+  overflow-x: auto;
+}
+
+.projects-grid .project-card {
+  scroll-snap-align: start;
+  flex: 0 0 360px;
 }
 
 .project-card {
@@ -964,7 +968,7 @@ h1 {
 
 .contact-section p {
   max-width: 600px;
-  margin-bottom: 50px;
+  margin-bottom: 45px;
   margin-left: auto;
   margin-right: auto;
   font-size: 20px;
@@ -977,6 +981,12 @@ h1 {
   display: flex;
 }
 
+.contact-buttons .contact-button {
+  white-space: nowrap;
+  justify-content: center;
+  width: 320px;
+}
+
 .contact-button {
   background: var(--white);
   color: var(--black);
@@ -985,13 +995,21 @@ h1 {
   cursor: pointer;
   border: none;
   border-radius: 8px;
+  align-items: center;
+  gap: 8px;
   padding: 20px 50px;
   font-family: Inter, sans-serif;
   font-size: 14px;
   font-weight: 600;
   text-decoration: none;
   transition: all .3s;
-  display: inline-block;
+  display: inline-flex;
+}
+
+.contact-button svg {
+  width: 22px;
+  height: 22px;
+  margin-right: 4px;
 }
 
 .contact-button:hover {
@@ -1020,6 +1038,23 @@ footer {
   padding: 30px 40px;
   font-family: Inter, sans-serif;
   font-size: 12px;
+}
+
+.footer-icons {
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 16px;
+  display: flex;
+}
+
+.footer-icons a {
+  color: var(--white);
+  opacity: .6;
+  transition: opacity .2s;
+}
+
+.footer-icons a:hover {
+  opacity: 1;
 }
 
 @media (width <= 1200px) {
@@ -1088,7 +1123,7 @@ footer {
   }
 
   nav {
-    padding: 15px 20px;
+    padding: 15px 10px;
   }
 
   .hamburger {
@@ -1189,7 +1224,7 @@ img {
   justify-content: center;
   align-items: center;
   min-height: 60vh;
-  padding: 100px 40px;
+  padding: 65px 40px;
   display: flex;
   position: relative;
   overflow: hidden;
@@ -1495,7 +1530,7 @@ img {
   }
 
   .featured-section, .expertise-section, .about-section, .contact-section {
-    padding: 60px 20px;
+    padding: 30px 20px;
   }
 
   .contact-section h2 {
@@ -1520,24 +1555,31 @@ img {
   }
 }
 
-.mouse-dot {
+.ripple-effect {
   pointer-events: none;
   z-index: 1;
-  opacity: .4;
-  will-change: transform;
   border-radius: 50%;
-  width: 8px;
-  height: 8px;
-  transition: opacity .3s;
+  width: 80px;
+  height: 80px;
+  animation: 1s ease-out forwards rippleGrow;
   position: absolute;
+  transform: translate(-50%, -50%)scale(0);
 }
 
-.hero-section:hover .mouse-dot {
-  opacity: .6;
+@keyframes rippleGrow {
+  0% {
+    opacity: .35;
+    transform: translate(-50%, -50%)scale(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%)scale(1);
+  }
 }
 
 @media (width <= 768px) {
-  .mouse-dot {
+  .ripple-effect {
     display: none;
   }
 
