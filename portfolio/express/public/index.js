@@ -4726,7 +4726,7 @@ const projectsData = [
         image: "/img/reano-ad.webp",
         detailPage: "projects/reano.html",
         description: "A cross-platform mobile app (iOS & Android) that bridges the gap between interior design inspiration and real purchasing decisions. Users build AI-powered Style Boards from their inspiration photos, visualize furniture in their actual rooms via AR, and virtually repaint walls \u2014 turning scattered ideas into confident, spatial choices.",
-        role: "Co-Project Lead / Product Planner / Full-Stack Developer",
+        role: "Product Manager / Co-Project Manager / Full-Stack Developer",
         contributions: [
             "Shaped the core product vision from user research and competitive analysis into a focused MVP across a 12-week capstone timeline",
             "Led sprint planning and cross-team alignment between 4 developers and 7 designers",
