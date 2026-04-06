@@ -269,11 +269,11 @@ body {
 
 /* Detail list */
 .detail-section__list {
-  max-width: 70%;
-  margin-left: 2rem;
   margin-top: 12px;
-  padding-left: 1rem;
+  padding-left: 2rem;
+  margin-left: 2rem;
   list-style: disc;
+  max-width: 80%;
 }
 
 .detail-section__list li {
