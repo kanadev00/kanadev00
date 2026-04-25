@@ -161,7 +161,7 @@ body {
 }
 
 .detail-sidebar li {
-  font-family: Lora, serif;
+  font-family: Inter, sans-serif;
   font-size: 14px;
   color: var(--black);
   line-height: 1.8;
@@ -169,7 +169,7 @@ body {
 }
 
 .detail-sidebar p {
-  font-family: Lora, serif;
+  font-family: Inter, sans-serif;
   font-size: 14px;
   color: var(--black);
   line-height: 1.6;
@@ -255,7 +255,7 @@ body {
 }
 
 .detail-section p {
-  font-family: Lora, serif;
+  font-family: Inter, sans-serif;
   font-size: 16px;
   color: var(--black);
   line-height: 1.8;
@@ -286,7 +286,7 @@ body {
 }
 
 .detail-section__list li {
-  font-family: Lora, serif;
+  font-family: Inter, sans-serif !important;
   font-size: 15px;
   color: var(--black);
   line-height: 1.8;
