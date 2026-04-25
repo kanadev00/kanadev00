@@ -4,12 +4,10 @@ import TechStack from './TechStack.js';
 import Projects from './Projects.js';
 import Contact from './Contact.js';
 import Footer from './Footer.js';
-import TopBar from './TopBar.js';
 
 const MainContainer = () => {
     return (
         <main className="main-container">
-            <TopBar />
             <Hero />
             <Projects />
             <TechStack />

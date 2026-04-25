@@ -19,7 +19,7 @@ const techStackData = {
     },
     devops: {
         title: "DevOps & Tools",
-        skills: ["Git", "AWS", "GitHub Actions"]
+        skills: ["Git", "AWS", "GitHub Actions", "Jira", "AI Tools"]
     },
     Others: {
         title: "Others",
@@ -27,7 +27,7 @@ const techStackData = {
     }
 };
 
-const TechStackCard = ({ category, data }) => {
+const TechStackCard = ({ data }) => {
     return (
         <div className="expertise-card animate-fade-in-up">
             <h3 className="expertise-title">{data.title}</h3>

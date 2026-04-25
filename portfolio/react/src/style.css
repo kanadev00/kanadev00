@@ -221,6 +221,10 @@
      border-radius: 4px;
  }
 
+ .top-bar-links a i {
+     font-size: 18px;
+ }
+
  .top-bar-links a:hover {
      color: var(--orange);
  }
@@ -503,18 +507,13 @@
 
  /* Projects Grid */
  .projects-grid {
-     display: flex;
-     flex-direction: row;
-     overflow-x: auto;
-     gap: 40px;
-     scroll-snap-type: x mandatory;
-     -webkit-overflow-scrolling: touch;
-     padding-bottom: 12px;
+     display: grid;
+     grid-template-columns: repeat(4, 1fr);
+     gap: 16px;
  }
 
  .projects-grid .project-card {
-     flex: 0 0 360px;
-     scroll-snap-align: start;
+     min-width: 0;
  }
 
  .project-card {
@@ -813,6 +812,7 @@
  .modal-body .project-role {
      margin-bottom: 25px;
      font-size: 14px;
+     font-family: 'Inter', sans-serif !important;
  }
 
  .modal-body .project-role strong {
@@ -923,7 +923,7 @@
      font-size: 14px;
      line-height: 2;
      color: var(--black);
-     font-family: 'Lora', serif;
+     font-family: 'Inter', sans-serif;
  }
 
  /* === CORE COMPETENCIES STRIP === */
@@ -1133,18 +1133,8 @@
      }
 
      .projects-grid {
-         display: flex;
-         flex-direction: row;
-         overflow-x: auto;
-         gap: 20px;
-         scroll-snap-type: x mandatory;
-         -webkit-overflow-scrolling: touch;
-         padding-bottom: 12px;
-     }
-
-     .projects-grid .project-card {
-         flex: 0 0 80vw;
-         scroll-snap-align: start;
+         grid-template-columns: repeat(2, 1fr);
+         gap: 16px;
      }
 
      .stats-section {
@@ -1240,19 +1230,13 @@
          grid-template-columns: 1fr;
      }
 
-     .expertise-grid {
-         display: flex;
-         flex-direction: row;
-         overflow-x: auto;
-         gap: 16px;
-         scroll-snap-type: x mandatory;
-         -webkit-overflow-scrolling: touch;
-         padding-bottom: 12px;
+     .projects-grid {
+         grid-template-columns: 1fr;
      }
 
-     .expertise-grid .expertise-card {
-         flex: 0 0 70vw;
-         scroll-snap-align: start;
+     .expertise-grid {
+         grid-template-columns: 1fr;
+         gap: 16px;
      }
 
      h1 {
@@ -1486,6 +1470,7 @@
     font-size: 13px;
     margin-bottom: 15px;
     padding: 10px 0;
+    font-family: 'Inter', sans-serif;
 }
 
 .project-contributions {
