@@ -17,11 +17,26 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Deploy portfolio/ to gh-pages
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: portfolio/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+        working-directory: portfolio
+
+      - name: Build React app
+        run: npm run build:gh-pages
+        working-directory: portfolio
+
+      - name: Deploy to gh-pages
+        uses: peaceiris/actions-gh-pages@4c82c7262fae7c69e985454e2c815482877cc12a  # v3.9.3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
-          publish_dir: ./portfolio
+          publish_dir: ./portfolio/public
           enable_jekyll: false
           keep_history: false
