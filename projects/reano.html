@@ -7,13 +7,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="../index.css">
     <link rel="stylesheet" href="project.css">
-    <style>
-        .detail-screenshots img,
-        .detail-visual img { border: none; }
-    </style>
 </head>
 <body>
 
@@ -114,31 +110,31 @@
 
         <div class="detail-section">
             <h2 class="detail-section__heading">My Contributions</h2>
-            <p>
-                <span class="contribution-role">As Co-Project Lead &amp; Product Planner:</span> Led overall project drive and product planning from kick-off through final presentation. Owned feature scoping, milestone planning, and cross-team alignment between 4 developers and 7 designers across a 12-week timeline.
+            <div>
+                <span class="contribution-role">As Co-Project Lead &amp; Product Manager:</span> Led overall project drive and product planning from kick-off through final presentation. Owned feature scoping, milestone planning, and cross-team alignment between 4 developers and 7 designers across a 12-week timeline.
                 <ul class="detail-section__list">
                     <li>Shaped the core product vision — translating user research, competitive analysis, and persona insights into a focused
                     MVP that balanced technical feasibility with user value. Designed intuitive flows and AI-assisted styling suggestions to
                     serve users with no design background, alongside a freemium business model that keeps core features free while
                     monetizing through affiliate commissions and premium subscriptions.</li>
                     <li>Facilitated collaborative workshops to align user stories, user flows, and data model decisions across design and development streams.</li>
-                    <li>Drove sprint planning and progress reporting, coordinating deliverables between ClickUp tasks, design handovers, and backend readiness gates.</li>
+                    <li>Drove sprint planning and progress reporting, coordinating deliverables between ClickUp tasks,and backend readiness gates.</li>
                 </ul>
-            </p>
-            <p>
+            </div>
+            <div>
                 <span class="contribution-role">As Full-Stack Developer:</span> Owned the Style Board recommendation pipeline and furniture listing features — the core AI-powered path from inspiration to product discovery.
                 <ul class="detail-section__list">
                     <li>Implemented the furniture recommendation system using OpenAI's text-embedding-3-small model. Each furniture item is described in natural language and converted into a vector embedding stored in the database. Style Board creation triggers a background job that ranks catalogue items by cosine similarity, serving the top results on demand.</li>
                     <li>Built a custom React Native hook that polls for recommendations while the background job completes, withholding render until results are stable to prevent visible list reordering.</li>
                     <li>Contributed to the furniture listing and filtering UI.</li>
                 </ul>
-            </p>
+            </div>
             <div class="detail-screenshots-wrapper">
-                <button class="screenshots-btn screenshots-btn--prev" onclick="this.nextElementSibling.scrollBy({left:-400,behavior:'smooth'})"><i class="fa-solid fa-angle-left"></i></button>
+                <button class="screenshots-btn screenshots-btn--prev"><i class="fa-solid fa-angle-left"></i></button>
                 <div class="detail-screenshots">
                     <img src="../img/reano/style-and-recommendation.jpg" alt="Reano — Style &amp; Recommendation">
                 </div>
-                <button class="screenshots-btn screenshots-btn--next" onclick="this.previousElementSibling.scrollBy({left:400,behavior:'smooth'})"><i class="fa-solid fa-angle-right"></i></button>
+                <button class="screenshots-btn screenshots-btn--next"><i class="fa-solid fa-angle-right"></i></button>
             </div>
         </div>
 
