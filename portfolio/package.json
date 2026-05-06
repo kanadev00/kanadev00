@@ -3,7 +3,7 @@
 	"scripts": {
 		"start": "parcel src/index.html --dist-dir ./public",
 		"build": "parcel build src/index.html --dist-dir ./public && cp -r src/img ./public/",
-		"build:gh-pages": "parcel build src/index.html --dist-dir ./public --public-url /kanadev00/ && cp -r src/img ./public/ && find ./public -name 'index.*.js' -exec sed -i.bak 's|\"/img/|\"/kanadev00/img/|g' {} \\; && rm ./public/*.bak"
+		"build:gh-pages": "parcel build src/index.html --dist-dir ./public --public-url /kanadev00/ && cp -r src/img ./public/ && find ./public -name '*.js' -exec sed -i.bak 's|\"/img/|\"/kanadev00/img/|g' {} \\; && find ./public -name '*.bak' -delete"
 	},
 	"dependencies": {
 		"react": "^19.2.0",
