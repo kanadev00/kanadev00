@@ -363,6 +363,17 @@ body {
   scroll-snap-align: start;
 }
 
+/* Reflection grid */
+.reflection-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+}
+
+.reflection-grid .sidebar-label {
+  font-size: 10px;
+}
+
 /* === RESPONSIVE === */
 
 @media (max-width: 1024px) {
@@ -444,5 +455,9 @@ body {
 
   .contribution-role {
     font-size: 12px;
+  }
+
+  .reflection-grid {
+    grid-template-columns: 1fr;
   }
 }
