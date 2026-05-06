@@ -32,6 +32,13 @@ node_modules/
 dist/
 build/
 
+# Parcel build output in portfolio/public/ (keep projects/ tracked)
+portfolio/public/*.html
+portfolio/public/*.css
+portfolio/public/*.js
+portfolio/public/*.map
+portfolio/public/img/
+
 # IDE
 .vscode/
 .idea/
